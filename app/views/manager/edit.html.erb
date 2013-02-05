@@ -1,2 +1,15 @@
-<%= @presub.Pname%>
 
+                         <div style="border-style:solid">
+                                <div><p>團隊介紹</p><%=@presub.Pintro.to_s%></div>
+                                <div><p>專案摘要</p><%=@presub.Psummary%></div>
+                                <div><p>回餽方案</p><%=@presub.Pfeedback%></div>
+                                <div><p>使用者名稱</p><%=@presub.user_id%></div>
+                         </div>
+
+  <%= form_tag manager_path(@presub.id),:method=>:put  do %>
+
+        <%= label :confirm, :confirm, '合格？'%>
+        <%= select :confirm, :confirm,[true,false]%>
+
+        <%= submit_tag '確定'%>
+  <% end%>

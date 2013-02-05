@@ -7,10 +7,13 @@ class ManagerController < ApplicationController
   def new
   end
 
-  def edit
-     @presub = Presub.find(params[:id])
+  def edit     
+    @presub = Presub.find(params[:id])
   end
 
   def update
+    @confirm = Presub.find(params[:id])
+    @confirm.update_attributes!(params[:confirm])
+    redirect_to manager_index_path
   end
 end

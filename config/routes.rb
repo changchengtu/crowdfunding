@@ -6,6 +6,8 @@ Crowdfunding::Application.routes.draw do
   resources :project
   resources :startaproject
   resources :manager
+  resources :test
+  get "test/gettime"=>"test#getTime"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

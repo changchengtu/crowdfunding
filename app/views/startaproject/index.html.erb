@@ -1,5 +1,18 @@
-<% @userpresub.each do |presub| %>
+未審核
+<% @userpresubunconfirm.each do |presub| %>
 	<div><%= presub.Pname%></div>
 <%end%>
+</br>
 
+合格
+<% @userpresubyes.each do |presub| %>
+        <div><%= presub.Pname%></div>
+<%end%>
+</br>
+
+不合格
+<% @userpresubno.each do |presub| %>
+        <div><%= presub.Pname%></div>
+<%end%>
+</br>
 <%= link_to "新增專案", new_startaproject_path %>

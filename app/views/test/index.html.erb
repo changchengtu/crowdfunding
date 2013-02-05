@@ -1,0 +1,3 @@
+<%= javascript_include_tag "prototype","effects"%>
+按一下<%=link_to "這裡", :complete=>"new Effects.Highlight('divHello')", :update=>"divHello", :url=>{:action=>:now}, :remote=>true%>
+<div id="divHello">test</div>

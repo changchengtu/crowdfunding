@@ -2,7 +2,9 @@ class StartaprojectController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @userpresub = Presub.where(:confirm=>nil, :user_id=>current_user.id).all
+    @userpresubunconfirm = Presub.where(:confirm=>nil, :user_id=>current_user.id).all
+    @userpresubyes = Presub.where(:confirm=>true, :user_id=>current_user.id).all
+    @userpresubno = Presub.where(:confirm=>false, :user_id=>current_user.id).all
 
   end
 

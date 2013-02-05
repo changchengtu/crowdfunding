@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crowdfunding</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div id="top-bar">
+  <ul><font face="微軟正黑體">
+    <% if user_signed_in? %>
+      <li><%= link_to '登出', destroy_user_session_path, :method => 'delete'%></li>
+    <% else %>
+      <li><%= link_to '登入', new_user_session_path %></li>
+    <% end %>
+      <li><%= link_to '新增專案', startaproject_index_path %></li>
+      <li><%= link_to '未審核專案', manager_index_path%></li>
+      <li><%= link_to '首頁', root_path %></li>
+
+  </ul></font>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

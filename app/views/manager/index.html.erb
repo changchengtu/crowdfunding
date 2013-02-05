@@ -1,0 +1,17 @@
+manager index</br>
+
+<%= @allpresub%>
+
+                  <% @allpresub.each do |presub| -%>
+                         <div style="border-style:solid"> 
+                                <div><p>專案名稱</p><%=presub.Pname%></div>
+				<div><p>專案分類</p><%=presub.Pclassify%></div>
+				<div><p>募集目標</p><%=presub.Pgoal%></div>
+                                <div><p>團隊介紹</p><%=presub.Pintro.to_s%></div>
+                                <div><p>專案摘要</p><%=presub.Psummary%></div>
+				<div><p>回餽方案</p><%=presub.Pfeedback%></div>
+				<div><p>使用者名稱</p><%=presub.user_id%></div>
+				<div><%=link_to "審核", edit_manager_path(presub)%></div>
+                          	
+			 </div>
+                  <% end%>

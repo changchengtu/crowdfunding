@@ -115,7 +115,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (~> 2.2.3)
-  jquery-rails
+  jquery-rails (~> 2.2.0)
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sqlite3

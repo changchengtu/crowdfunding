@@ -1,1 +1,21 @@
-project index
+
+<div id="container">
+
+  <% @allproject.each do |p|%>
+    <div class="item"><%= simple_format p.Psummary%></div>
+  <% end %>
+</div>
+
+
+<script>
+$(function(){
+var $container = $('#container');
+$container.imagesLoaded(function(){
+$container.masonry({
+itemSelector : '.item',
+ isAnimated: true,
+columnWidth : 30
+});
+});
+});
+</script>

@@ -1,11 +1,11 @@
-
+<center>
 <div id="container">
 
   <% @allproject.each do |p|%>
-    <div id="id-item" class="item"><%= simple_format p.Psummary%></div>
+    <div id="id-item" class="item"><%= simple_format p.Pname%><center><%= simple_format p.Ppic%></center><%= simple_format p.Pdescribe%></div>
   <% end %>
 </div>
-
+</center>
 
 
 

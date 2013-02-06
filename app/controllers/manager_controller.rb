@@ -1,5 +1,5 @@
 class ManagerController < ApplicationController
-
+  before_filter :authenticate_admin!
   def index
     @allpresub = Presub.where(:confirm=>nil).all
   end

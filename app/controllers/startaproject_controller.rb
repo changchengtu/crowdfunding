@@ -16,7 +16,7 @@ class StartaprojectController < ApplicationController
     start = Presub.new(params[:start])
    
     if start.save
-      redirect_to manager_index_path
+      redirect_to startaproject_index_path
     else
       redirect_to root_path
     end

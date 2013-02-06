@@ -11,13 +11,26 @@
 <p class="alert"><%= alert %></p>
 <div id="top-bar">
   <ul><font face="微軟正黑體">
+
+    <% if admin_signed_in? %>
+      <li><%= link_to 'admin登出', destroy_admin_session_path, :method => 'delete'%></li>
+    <% else %>
+      <li><%= link_to 'admin登入', new_admin_session_path %></li>
+    <% end %>
+
     <% if user_signed_in? %>
       <li><%= link_to '登出', destroy_user_session_path, :method => 'delete'%></li>
     <% else %>
       <li><%= link_to '登入', new_user_session_path %></li>
     <% end %>
+
+    <% if user_signed_in? %>
       <li><%= link_to '新增專案', startaproject_index_path %></li>
+    <% end %>
+
+    <% if admin_signed_in? %>
       <li><%= link_to '未審核專案', manager_index_path%></li>
+    <% end %>
       <li><%= link_to '首頁', root_path %></li>
 
   </ul></font>

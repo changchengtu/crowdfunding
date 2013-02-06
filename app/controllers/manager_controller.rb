@@ -14,6 +14,9 @@ class ManagerController < ApplicationController
   def update
     @confirm = Presub.find(params[:id])
     @confirm.update_attributes!(params[:confirm])
+    if params[:confirm]
+      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :Pon=>false)
+    end
     redirect_to manager_index_path
   end
 end

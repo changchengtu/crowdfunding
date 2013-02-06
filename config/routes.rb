@@ -3,9 +3,13 @@ Crowdfunding::Application.routes.draw do
   devise_for :users
 
   root :to => "project#index"
+  get "startaproject/authorizep/:id"=>"startaproject#authorizep"
   resources :project
   resources :startaproject
   resources :manager
+  
+
+
   resources :test
   get "test/gettime"=>"test#getTime"
   # The priority is based upon order of creation:

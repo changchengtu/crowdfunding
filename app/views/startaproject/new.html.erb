@@ -3,26 +3,28 @@ new a presubmission
 <div id="presubForm">
   <%= form_tag '/startaproject', :method=>:post do %>
 
-    <%= label :start, :Pname, '專案名稱'%>
+    <%= label :start, :Pname, '專案名稱：'%>
     <%= text_field :start, :Pname, :value=>"啥東東"%>
 
-    <%= label :start, :Pclassify, '專案類別'%>
+    <%= label :start, :Pclassify, '專案類別：'%>
     <%= text_field :start, :Pclassify %>
 
-    <%= label :start, :Pgoal, '集資目標'%>
+    <%= label :start, :Pgoal, '集資目標：'%>
     <%= text_field :start, :Pgoal, :value=>0%>
 
-    <%= label :start, :Pintro, '自我介紹'%>
+    <%= label :start, :Pintro, '自我介紹：'%>
     <%= text_area :start, :Pintro %>
 
-    <%= label :start, :Psummary, '專案摘要'%>
+    <%= label :start, :Psummary, '專案摘要：'%>
     <%= text_area :start, :Psummary %>
 
-    <%= label :start, :Pfeedback, '集資回饋'%>
+    <%= label :start, :Pfeedback, '集資回饋：'%>
     <%= text_area :start, :Pfeedback%>
 
     <%= hidden_field :start, :user_id, :value=>current_user.id%>
 
-    <%= submit_tag '確定送出'%>
+	<center>
+    <%= submit_tag '確定送出', :id =>'button-id'%>
+    </center>
   <% end %>
 </div>

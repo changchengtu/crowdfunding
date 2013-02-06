@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205030841) do
+ActiveRecord::Schema.define(:version => 20130206010259) do
 
   create_table "presubs", :force => true do |t|
     t.string   "Pname"
@@ -22,6 +22,20 @@ ActiveRecord::Schema.define(:version => 20130205030841) do
     t.string   "Pfeedback"
     t.boolean  "confirm"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "pros", :force => true do |t|
+    t.string   "Pname"
+    t.string   "Pclassify"
+    t.integer  "Pgoal"
+    t.text     "Pintro"
+    t.text     "Psummary"
+    t.text     "Pfeedback"
+    t.boolean  "Pon"
+    t.integer  "user_id"
+    t.integer  "presub_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

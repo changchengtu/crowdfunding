@@ -2,20 +2,34 @@
 <div id="container">
 
   <% @allproject.each do |p|%>
-    <div class="item"><%= simple_format p.Psummary%></div>
+    <div id="id-item" class="item"><%= simple_format p.Psummary%></div>
   <% end %>
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 $(function(){
-var $container = $('#container');
-$container.imagesLoaded(function(){
-$container.masonry({
-itemSelector : '.item',
- isAnimated: true,
-columnWidth : 30
-});
-});
+      var $container = $('#container');
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector : '.item',
+      isAnimated: true,
+      columnWidth : 30
+    });
+  });
 });
 </script>

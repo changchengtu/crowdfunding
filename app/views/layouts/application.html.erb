@@ -9,7 +9,7 @@
   <%= javascript_include_tag "jquery.masonry.min.js" %>
 
 </head>
-<body>
+<body onresize = "adjustWidth()">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <div id="top-bar">
@@ -39,9 +39,10 @@
   </ul></font>
 </div>
 
-<div id="main">
+<div id="main" style="background-color:red">
   <%= yield %>
 </div>
 
 </body>
 </html>
+

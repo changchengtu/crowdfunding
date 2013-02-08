@@ -1,11 +1,14 @@
-<center>
-<div id="container">
 
+<div id="container">
+  
+  <div>
   <% @allproject.each do |p|%>
-    <div id="id-item" class="item"><%= simple_format p.Pname%><center><%= simple_format p.Ppic%></center><%= simple_format p.Pdescribe%></div>
+    <div id="id-item" class="item"><%= simple_format p.Pname%><center><a href=<%=project_path(p.id)%>><img src=<%=p.Ppic%>></a></center><%= simple_format p.Pdescribe%></div>
   <% end %>
+  </div>
+  
 </div>
-</center>
+
 
 
 
@@ -28,6 +31,7 @@ $(function(){
     $container.masonry({
       itemSelector : '.item',
       isAnimated: true,
+      isFitWidth: true,
       columnWidth : 30
     });
   });

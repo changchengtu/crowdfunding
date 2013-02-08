@@ -13,10 +13,10 @@
  */
 
 #top-bar {
-  margin:0 auto;
-  height:30px;
+  margin-top:0px;
   background-color: #404040;
-  border-radius:10px;
+  height:40px;
+  width: 100%;
 }
 
 #top-bar ul {
@@ -32,12 +32,18 @@
   float: right;
   text-align: center;
   margin-right: 3px;
-  margin-top: 5px;
+  margin-top: 10px;
   height: 30px;
 }
 
 #top-bar li a {
   list-style-type:none;
-  font-size: 16px;
+  font-size: 18px;
+  
   color:white;
+  text-decoration: none;
+}
+
+#top-bar li a:hover{
+  color:#ff8c00;
 }

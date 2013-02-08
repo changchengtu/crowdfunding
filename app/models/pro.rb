@@ -3,4 +3,5 @@ class Pro < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :presub
+  has_many :investments
 end

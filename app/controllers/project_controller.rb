@@ -5,6 +5,11 @@ class ProjectController < ApplicationController
   end
 
   def new
+    
+  end
+
+  def show
+	    @thisp = Pro.find(params[:id])
   end
 
   def create

@@ -12,7 +12,7 @@ class StartaprojectController < ApplicationController
     
   end
 
-  def create
+  def create                         #創造一個前置專案
     start = Presub.new(params[:start])
    
     if start.save
@@ -22,8 +22,14 @@ class StartaprojectController < ApplicationController
     end
   end
 
-  def authorizep
+  def authorizep                    #顯示可上架的專案
     @pro = Pro.find(params[:id])
+  end
+
+  def updatep                       #更新上架專案
+    @pro = Pro.find(params[:id])
+    @pro.update_attributes!(params[:content])
+    redirect_to startaproject_index_path
   end
 
   def edit

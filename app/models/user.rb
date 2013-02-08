@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
 
   has_many :presubs
   has_many :pros
+  has_many :investments
 end

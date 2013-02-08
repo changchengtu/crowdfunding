@@ -6,6 +6,7 @@ Crowdfunding::Application.routes.draw do
 
   root :to => "project#index"
   get "startaproject/authorizep/:id"=>"startaproject#authorizep"
+  put "startaproject/authorizep/updatep/:id"=>"startaproject#updatep"
   resources :project
   resources :startaproject
   resources :manager

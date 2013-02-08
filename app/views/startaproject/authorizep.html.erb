@@ -1,2 +1,20 @@
-<%= @pro.Pname%>
+<%= form_tag "updatep/"+@pro.id.to_s ,:method=>:put  do %>
+  <%= label :content, :Ppic, '封面圖片'%>
+  <%= text_field :content, :Ppic, :value=>@pro.Ppic%>
 
+  <%= label :content, :Pdescribe, '專案說明'%>
+  <%= text_field :content, :Pdescribe, :value=>@pro.Pdescribe%>
+
+  <%= label :content, :Pintro, '團隊介紹'%>
+  <%= text_area :content, :Pintro, :value=>@pro.Pintro%>
+
+  <%= label :content, :Psummary, '專案內容'%>
+  <%= text_area :content, :Psummary, :value=>@pro.Psummary%>
+
+  <%= label :content, :Pfeedback, '投資回餽'%>
+  <%= text_area :content, :Pfeedback, :value=>@pro.Pfeedback%>
+
+  <%= label :content, :Pon, '上架'%>
+  <%= select :content, :Pon, [false,true]%>
+  <%= submit_tag '確定'%>
+<% end%>

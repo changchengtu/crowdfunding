@@ -5,10 +5,15 @@ Crowdfunding::Application.routes.draw do
   devise_for :users
 
   root :to => "project#index"
+
+  resources :project
+
   get "startaproject/authorizep/:id"=>"startaproject#authorizep"
   put "startaproject/authorizep/updatep/:id"=>"startaproject#updatep"
-  resources :project
   resources :startaproject
+
+  get "manager/editpro/:id"=>"manager#editpro"
+  put "manager/updatepro/:id"=>"manager#updatepro"
   resources :manager
   
 

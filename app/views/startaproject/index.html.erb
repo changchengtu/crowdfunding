@@ -1,18 +1,49 @@
-未審核
-<% @userpresubunconfirm.each do |presub| %>
-	<div><%=simple_format presub.Pname%></div>
-<%end%>
-</br>
 
-合格
-<% @usercanonproject.each do |pro| %>
-        <div><%=simple_format pro.Pname%><%= link_to "專案上架","startaproject/authorizep/"+pro.id.to_s %></div>
-<%end%>
-</br>
+<div id="newProject" align="right" ><%= link_to "新增專案", new_startaproject_path %></div>
 
-不合格
-<% @userpresubno.each do |presub| %>
-        <div><%=simple_format presub.Pname%></div>
-<%end%>
-</br>
-<%= link_to "新增專案", new_startaproject_path %>
+<center>
+<div id="content-all" align="center">
+	
+	<div id="uncheck">
+		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >未審核</div>
+		<div style="background-color:; border-radius:10px; width:100%; ">
+
+			<% @userpresubunconfirm.each do |presub| %>
+			<%=simple_format presub.Pname%>
+			<hr style="width: 80%; border-color:#104E8B;border:0.5;">
+			<%end%>
+		</div>
+	</div>
+
+
+	<div id="checkOK">
+		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >合         格</div>
+		<div style="background-color:; border-radius:10px; width:100%; ">
+			
+			<% @usercanonproject.each do |pro| %>
+			<div style="float: left; width: 45%;">
+				<%=simple_format pro.Pname%></div>
+      		<div id="projectUp" style="float: center; width: 45%;height: 50px;line-height: 50px;">  
+      			<%= link_to "專案上架","startaproject/authorizep/"+pro.id.to_s %></div>
+        	
+       		 <hr style="width: 80%; border-color:#104E8B;border:0.5;">
+			<%end%>
+		</div>
+	</div>
+
+
+	<div id="checkNotOK">
+		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >不合格</div>
+		<div style="background-color:; border-radius:10px; width:100%; ">
+	
+			<% @userpresubno.each do |presub| %>
+       		<%=simple_format presub.Pname%>
+      		<hr style="width: 80%; border-color:#104E8B;border:0.5;">
+			<%end%>
+		</div>
+	</div>
+	
+
+</div>
+</center>
+

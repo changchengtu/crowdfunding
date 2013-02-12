@@ -51,3 +51,70 @@
 #button-id{
   cursor: pointer; 
 }
+
+#content-all{
+  font-family: "微軟正黑體";
+    width:80%;
+    height:auto;
+    background-color:#FFFFFF;
+    margin-top:20px;
+
+}
+
+#uncheck{
+  background-color:#FFFFFF;
+  float:left;
+  width:30%;
+  border-radius: 5px;
+  height: auto;
+  margin:5px;
+  
+}
+
+#checkOK{
+  background-color:#FFFFFF;
+  float:left;
+  width:30%;
+  height: auto;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#checkNotOK{
+  background-color:#FFFFFF;
+  float:left;
+  width:30%;
+  height: auto;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#newProject{
+  width:100px;
+  text-align:center;
+  background-color:#DC143C;
+  height:50px;
+  line-height: 50px;
+  border-radius: 5px;   
+  margin-top: 10px;
+}
+
+#newProject a{
+  list-style-type:none;
+  font-size: 18px; 
+  color:white;
+  text-decoration: none;
+}
+#newProject a:hover{
+  color:#000000;
+}
+
+#projectUp a{
+  list-style-type:none;
+  font-size: 18px; 
+  text-decoration: none;
+}
+
+#projectUp a:hover{
+  color:#ff8c00;
+}

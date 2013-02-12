@@ -13,12 +13,11 @@ class StartaprojectController < ApplicationController
   end
 
   def create                         #創造一個前置專案
-    start = Presub.new(params[:start])
-   
-    if start.save
+    @start = Presub.new(params[:start])
+    if @start.save
       redirect_to startaproject_index_path
     else
-      redirect_to root_path
+      render :template=>'startaproject/new.html.erb' 
     end
   end
 

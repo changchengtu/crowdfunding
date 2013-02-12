@@ -7,7 +7,8 @@
   <%= csrf_meta_tags %>
   <%= javascript_include_tag "jquery.min.js" %>
   <%= javascript_include_tag "jquery.masonry.min.js" %>
-
+  <%= stylesheet_link_tag "SimpleTextEditor" %>
+  <%= javascript_include_tag "SimpleTextEditor.js" %>
 </head>
 <body onresize = "adjustWidth()">
 <p class="notice"><%= notice %></p>
@@ -22,7 +23,7 @@
     <% end %>
 
     <% if user_signed_in? %>
-      <li><%= link_to '登出', destroy_user_session_path, :method => 'delete'%></li>
+      <li><%= link_to current_user.name, destroy_user_session_path, :method => 'delete'%></li>
     <% else %>
       <li><%= link_to '登入', new_user_session_path %></li>
     <% end %>

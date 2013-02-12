@@ -16,5 +16,17 @@
 
   <%= label :content, :Pon, '上架'%>
   <%= select :content, :Pon, [false,true]%>
-  <%= submit_tag '確定'%>
+  <input name="commit" type="submit" value="確定" onClick="ste.submit()">
 <% end%>
+
+<script> 
+ var ste = new SimpleTextEditor("content_Psummary", "ste", "content[Psummary]"); 
+ ste.cssFile = 'test.css'; 
+ ste.charset = 'iso-8859-1'; 
+ ste.init();
+
+ function tes(){
+  alert("sdsd");
+
+ } 
+</script>

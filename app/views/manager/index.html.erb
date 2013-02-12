@@ -1,14 +1,10 @@
-manager index</br>
-
-<%= @allpresub%>
-
+未審核專案
 <div>
     <table>
         <thead>
 		<th>專案名稱</th>
 		<th>專案分類</th>
 		<th>募集目標</th>
-		<th>使用者名稱</th>
         </thead>
          <tbody>
 		<% @allpresub.each do |presub| -%>
@@ -16,8 +12,28 @@ manager index</br>
                                 <td><%=presub.Pname%></td>
 				<td><%=presub.Pclassify%></td>
 				<td><%=presub.Pgoal%></td>
-				<td><%=presub.user_id%></td>
 				<td><%=link_to "審核", edit_manager_path(presub)%></td>
+                        </tr>
+                <% end-%>
+        </tbody>
+    </table>
+</div>
+
+合格專案
+<div>
+    <table>
+        <thead>
+                <th>專案名稱</th>
+                <th>專案分類</th>
+                <th>募集目標</th>
+        </thead>
+         <tbody>
+                <% @allpro.each do |pro| -%>
+                        <tr>
+                                <td><%=pro.Pname%></td>
+                                <td><%=pro.Pclassify%></td>
+                                <td><%=pro.Pgoal%></td>
+                                <td><%=link_to "審核", "/manager/editpro/"+pro.id.to_s%></td>
                         </tr>
                 <% end-%>
         </tbody>

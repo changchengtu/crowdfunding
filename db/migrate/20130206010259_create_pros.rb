@@ -9,7 +9,8 @@ class CreatePros < ActiveRecord::Migration
       t.text :Pintro
       t.text :Psummary
       t.text :Pfeedback
-      t.boolean :Pon
+      t.boolean :PuserOn
+      t.boolean :PmanagerOn
 
       t.references :user
       t.references :presub

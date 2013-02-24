@@ -1,6 +1,17 @@
 // Place all the styles related to the startaproject controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.ste .bar { background: #ECE9D8; padding: 3px; border: #ACA899 1px; border-style: solid solid none solid; }
+.ste .frame { border: 1px solid; border-color: #716F64 #ECE9D8 #ECE9D8 #716F64; }
+.ste .frame iframe { width: 800px; height: 1000px; }
+.ste img { border: 0; }
+.ste .button { padding: 1px; border: #ECE9D8 1px solid; }
+.ste .button-hover { padding: 1px; border: 1px solid; border-color: #ffffff #ACA899 #ACA899 #ffffff; }
+.ste .button-click { padding: 1px; border: 1px solid; border-color: #ACA899 #ffffff #ffffff #ACA899; }
+.ste .separator { width: 0px; height: 18px; border-left: #aca899 1px solid; border-right: #ffffff 1px solid; margin: 0 5px; }
+.ste .source { padding-top: 5px; }
+
+
 #presubForm {
   width:600px;
   margin: 0 auto;
@@ -117,4 +128,41 @@
 
 #projectUp a:hover{
   color:#ff8c00;
+}
+
+#main_authorizep{
+  width:600px;
+  margin: 0 auto;
+}
+
+#main_authorizep label{
+  width:100px;
+  font-size:13pt;
+  font-family:微軟正黑體;
+}
+
+#content_Ppic{
+  width:500px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+}
+
+#content_Pdescribe{
+  width:500px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+}
+
+#main_authorizep textarea{
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius:7px;
+  border-style:inset;
+  height:150px;
+  width:600px; 
+  box-shadow:0px 0px 2px #000;
 }

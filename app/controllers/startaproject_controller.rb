@@ -2,9 +2,9 @@ class StartaprojectController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @userpresubunconfirm = Presub.where(:confirm=>nil, :user_id=>current_user.id).all    #顯示位審核的專案
-    @usercanonproject = Pro.where(:Pon=>false, :user_id=>current_user.id).all            #顯示上架中的專案
-    @userpresubno = Presub.where(:confirm=>false, :user_id=>current_user.id).all         #顯示被否定的專案
+    @userpresubunconfirm = Presub.where(:confirm=>nil, :user_id=>current_user.id).all    #........
+    @usercanonproject = Pro.where(:PuserOn=>false, :user_id=>current_user.id).all            #........
+    @userpresubno = Presub.where(:confirm=>false, :user_id=>current_user.id).all         #........
 
   end
 

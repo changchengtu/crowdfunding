@@ -19,7 +19,29 @@
     </table>
 </div>
 
-合格專案
+
+請求上架
+<div>
+    <table>
+        <thead>
+                <th>專案名稱</th>
+                <th>專案分類</th>
+                <th>募集目標</th>
+        </thead>
+         <tbody>
+                <% @allreadytoon.each do |on| -%>
+                        <tr>
+                                <td><%=on.Pname%></td>
+                                <td><%=on.Pclassify%></td>
+                                <td><%=on.Pgoal%></td>
+                                <td><%=link_to "on", "/manager/editpro/"+on.id.to_s %></td>
+                        </tr>
+                <% end-%>
+        </tbody>
+    </table>
+</div>
+
+以上架專案
 <div>
     <table>
         <thead>
@@ -33,7 +55,6 @@
                                 <td><%=pro.Pname%></td>
                                 <td><%=pro.Pclassify%></td>
                                 <td><%=pro.Pgoal%></td>
-                                <td><%=link_to "審核", "/manager/editpro/"+pro.id.to_s%></td>
                         </tr>
                 <% end-%>
         </tbody>

@@ -14,9 +14,12 @@
 
 #top-bar {
   margin-top:0px;
-  background-color: #404040;
-  height:40px;
+  background-color: #dc143c;
+  height:50px;
   width: 100%;
+  position:absolute;
+  top:0;
+  right:0;
 }
 
 #top-bar ul {
@@ -32,7 +35,7 @@
   float: right;
   text-align: center;
   margin-right: 3px;
-  margin-top: 10px;
+  margin-top: 15px;
   height: 30px;
 }
 
@@ -48,6 +51,9 @@
   color:#ff8c00;
 }
 
+#main {
+  margin-top:70px;
+}
 
 
 

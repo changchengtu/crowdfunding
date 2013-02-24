@@ -1,3 +1,16 @@
-<div id="showsummary">
-  <%= simple_format @thisp.Psummary%>
+<div id="showname">
+  <%= @thisp.Pname%>
+</div>
+<div id="showcontext">
+  <div id="showmedia">
+    <img src=<%= @thisp.Ppic%> width="590px">
+  </div>
+
+  <div id="showwriter">
+    <%= @thisp.user.name%>
+  </div>
+
+  <div id="showsummary">
+    <%= simple_format @thisp.Psummary%>
+  </div>
 </div>

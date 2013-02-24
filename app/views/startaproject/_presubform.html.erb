@@ -1,15 +1,14 @@
-
 <div id="presubForm">
   <%= form_tag '/startaproject', :method=>:post do %>
 
     <%= label :start, :Pname, '專案名稱：'%>
-    <%= text_field :start, :Pname, :value=>"啥東東"%>
+    <%= text_field :start, :Pname, :value=>"啥東東"%></br>
 
     <%= label :start, :Pclassify, '專案類別：'%>
-    <%= text_field :start, :Pclassify %>
+    <%= text_field :start, :Pclassify %></br>
 
     <%= label :start, :Pgoal, '集資目標：'%>
-    <%= text_field :start, :Pgoal, :value=>0%>
+    <%= text_field :start, :Pgoal, :value=>0%></br>
 
     <%= label :start, :Pintro, '自我介紹：'%>
     <%= text_area :start, :Pintro %>
@@ -24,6 +23,8 @@
 
         <center>
     <%= submit_tag '確定送出', :id =>'button-id'%>
+
+
     </center>
   <% end %>
 </div>

@@ -11,42 +11,54 @@
 .ste .separator { width: 0px; height: 18px; border-left: #aca899 1px solid; border-right: #ffffff 1px solid; margin: 0 5px; }
 .ste .source { padding-top: 5px; }
 
-
 #presubForm {
-  width:600px;
+  width:800px;
   margin: 0 auto;
 
 }
 
 #presubForm label{
-  width:100px;
+  width:200px;
   font-family:微軟正黑體;
-  font-size:13pt;
+  font-size:15pt;
+ 
 
  
 }
 #start_Pname{
-  width:500px;
+  width:600px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius:5px;
   box-shadow:0px 0px 0.5px #000;
+  font-size:17px;
+  margin-bottom:10px;
+  border-style:inset;
+  border-width:medium;  
 }
 
 #start_Pclassify{
-  width:500px;
+  width:600px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius:5px;
   box-shadow:0px 0px 0.5px #000;
+  font-size:17px;  
+  margin-bottom:10px;
+  border-style:inset;
+  border-width:medium;  
 }
 
 #start_Pgoal{
-  width:500px;
+  width:600px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius:5px;
   box-shadow:0px 0px 0.5px #000;
+  font-size:20px;  
+  margin-bottom:10px;
+  border-style:inset;
+  border-width:medium;  
 }
 
 #presubForm textarea{
@@ -55,12 +67,19 @@
   border-radius:7px;
   border-style:inset;
   height:150px;
-  width:600px; 
+  width:800px; 
   box-shadow:0px 0px 2px #000;
+  font-size:24px; 
+  margin-bottom:10px;
+  border-style:inset;
+ 
 }
 
 #button-id{
   cursor: pointer; 
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius:5px;
 }
 
 #content-all{
@@ -166,3 +185,4 @@
   width:600px; 
   box-shadow:0px 0px 2px #000;
 }
+

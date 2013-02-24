@@ -3,26 +3,64 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #container {
-  margin:0 auto;  
+  margin:0 auto; 
 }
 #id-item {
   width: 300px;
-  background-color:#CCCCCC;
+  background-color:white;
   margin: 10px;
   float: left;
   border-style:solid;
   border-color:white;
   border-width:15px;
-  box-shadow:4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
 
 #id-item img{
   width: 280px;
 }
 
-#showsummary {
-  width: 800px;
+#showname {
+  margin-top:80px;
+  height: 100px;
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 40pt;
+  font-family: 微軟正黑體;
+  text-align:center;
+}
+
+#showcontext {
+  width: 1000px;
   height: auto;
-  margin:0 auto;
-  background-color:green;
+  margin: 0 auto;
+  box-shadow: 8px 8px 16px 8px rgba(51, 51, 102, 0.5);
+  border-radius: 10px;
+  border-style:solid;
+  border-width:20px;
+  border-color:white;
+  background-color: white;
+}
+
+#showmedia {
+  float: left;
+  width: 600px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+
+#showwriter {
+  float: left;
+  width: 380px;
+  min-height: 500px;
+  background-color:#b4ebe4;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px; 
+}
+
+#showsummary {
+  width: 600px;
 }

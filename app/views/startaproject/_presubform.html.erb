@@ -5,12 +5,12 @@
     <%= text_field :start, :Pname, :value=>"啥東東"%></br>
 
     <%= label :start, :Pclassify, '專案類別：'%>
-    <%= text_field :start, :Pclassify %></br>
+    <%= select :start, :Pclassify, ['設計商品','音樂影視','舞台演出','休閒娛樂','創作出版','社會文化','科技應用','美食饗宴'] %></br>
 
     <%= label :start, :Pgoal, '集資目標：'%>
     <%= text_field :start, :Pgoal, :value=>0%></br>
 
-    <%= label :start, :Pintro, '自我介紹：'%>
+    <%= label :start, :Pintro, '團隊介紹：'%>
     <%= text_area :start, :Pintro %>
 
     <%= label :start, :Psummary, '專案摘要：'%>

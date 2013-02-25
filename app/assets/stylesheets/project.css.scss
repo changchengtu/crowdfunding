@@ -7,7 +7,7 @@
 }
 #id-item {
   width: 300px;
-  background-color:white;
+  background-color: white;
   margin: 10px;
   float: left;
   border-style:solid;
@@ -17,8 +17,14 @@
   box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
 
+#id-item-name {
+  font-size: 15pt;
+  color: #178918;
+  font-weight:bold;
+}
+
 #id-item img{
-  width: 280px;
+  width: 300px;
 }
 
 #showname {
@@ -29,6 +35,8 @@
   font-size: 40pt;
   font-family: 微軟正黑體;
   text-align:center;
+  color: #178918;
+  font-weight:bold;
 }
 
 #showcontext {
@@ -51,14 +59,15 @@
   border-width: 5px;
 }
 
-#showwriter {
+#showteam {
   float: left;
-  width: 380px;
-  min-height: 500px;
-  background-color:#b4ebe4;
+  width: 350px;
+  min-height: 300px;
+  background-color:#F8E6D4;
   border-style: solid;
-  border-color: white;
-  border-width: 5px; 
+  border-color: #F8E6D4;
+  border-width: 15px;
+  border-radius: 10px; 
 }
 
 #showsummary {

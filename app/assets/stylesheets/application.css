@@ -14,7 +14,7 @@
 
 #top-bar {
   margin-top:0px;
-  background-color: #dc143c;
+  background-color: black;
   height:50px;
   width: 100%;
   position:absolute;
@@ -55,7 +55,9 @@
   margin-top:70px;
 }
 
-
+body {
+  background-color: #F2F2F2;
+}
 
 
 

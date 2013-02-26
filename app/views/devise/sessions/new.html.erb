@@ -1,18 +1,45 @@
+<style>
+#user_email{
+	-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+  width:240px;
+}
 
+#user_password{
+	-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+  width:240px;
+}
+#SignIn{
+	margin: 0 auto;
+	border-radius: 10px; 
+	border-style:solid; 
+	border-color:white; 
+	border-width:15px; 
+	background-color: white;
+	width: 250px; 
+	height: 375px; 
+	box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+	
+}
 
-<center>
-<div id="SignIn" style="border-radius: 10px; background-color: #CCCCCC; width: 35%; height: 350px;">
+</style>
+
+<div id="SignIn">
 
 <h1>Sign in</h1>
-<hr>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
   
-  <div><%= f.label :email %><br />
+  <div style="color: #8B4726"><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
+  <div style="color: #8B4726"><%= f.label :password %><br />
   <%= f.password_field :password %></div><br />
 
   <% if devise_mapping.rememberable? -%>
@@ -24,4 +51,4 @@
 <% end %><br />
 
 <%= render "devise/shared/links" %> 
-</div></center>
+</div>

@@ -1,18 +1,59 @@
-<h2>Sign up</h2>
+<style>
+#admin_email{
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+  width:240px;
+}
+
+#admin_password{
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+  width:240px;
+}
+
+#admin_password_confirmation{
+  border-radius:5px;
+  box-shadow:0px 0px 0.5px #000;
+  width:240px;
+}
+
+#SignUpAdmin{
+	margin: 0 auto;
+	border-radius: 10px; 
+	border-style:solid; 
+	border-color:white; 
+	border-width:15px; 
+	background-color: white;
+	width: 250px; 
+	height: auto; 
+	box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+	
+}
+
+
+
+</style>
+
+
+<div id="SignUpAdmin" >
+	
+<h1>Sign up</h1>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div style="color: #8B4726"><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
+  <div style="color: #8B4726"><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div style="color: #8B4726"><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
-
+</br>
   <div><%= f.submit "Sign up" %></div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

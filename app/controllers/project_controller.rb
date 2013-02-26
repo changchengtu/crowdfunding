@@ -1,5 +1,4 @@
 class ProjectController < ApplicationController
-
   def index
     @allproject = Pro.where(:PmanagerOn=>true)
   end

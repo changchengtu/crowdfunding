@@ -1,6 +1,6 @@
 class StartaprojectController < ApplicationController
   before_filter :authenticate_user!
-
+ 
   def index
     @userpresubunconfirm = Presub.where(:confirm=>nil, :user_id=>current_user.id).all    #........
     @usercanonproject = Pro.where(:PuserOn=>false, :user_id=>current_user.id).all            #........

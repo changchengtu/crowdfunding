@@ -1,5 +1,18 @@
 class ManagerController < ApplicationController
   before_filter :authenticate_admin!
+
+  t = Thread.new do                                #每隔一天減少以上架專案中的天數
+    while(true) do
+      sleep 86400
+      all = Pro.where("days > 0 AND PmanagerOn = ?", true).all
+      all.each do |data|
+        leftdays = data.days - 1
+        data.update_attributes!(:days=>leftdays)
+      end
+    end
+  end
+
+
   def index
     @allpresub = Presub.where(:confirm=>nil).all
     @allreadytoon = Pro.where(:PmanagerOn=>false,:PuserOn=>true) #haven't done yet
@@ -18,7 +31,7 @@ class ManagerController < ApplicationController
     @confirm.update_attributes!(params[:confirm])
    
     if @confirm.confirm
-      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false)
+      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false, :days=>30)
     end
     redirect_to manager_index_path
   end

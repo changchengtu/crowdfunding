@@ -11,6 +11,7 @@ class CreatePros < ActiveRecord::Migration
       t.text :Pfeedback
       t.boolean :PuserOn
       t.boolean :PmanagerOn
+      t.integer :days
 
       t.references :user
       t.references :presub

@@ -1,87 +1,91 @@
 // Place all the styles related to the project controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#index{
+width:80%;
+margin: 0 auto;
+}
 #show {
-  margin: 0 auto;
+margin: 0 auto;
+
 }
 #item {
-  width:145px;
-  height:50px;
+width:70px;
+height:50px;
+float:left;
 }
 #container {
-  margin:0 auto;
+margin-right:0px;
+width:80%;
+margin: 0 auto;
+border-right-style:solid;
+border-width:1px;
+border-color:#CCCCCC;
 }
 #id-item {
-  width: 300px;
-  background-color: white;
-  margin: 10px;
-  float: left;
-  border-style:solid;
-  border-color:white;
-  border-width:15px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+width: 300px;
+background-color: white;
+margin: 10px;
+float: left;
+border-style:solid;
+border-color:white;
+border-width:15px;
+border-radius: 10px;
+box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
-
 #id-item-name {
-  font-size: 15pt;
-  color: #178918;
-  font-weight:bold;
+font-size: 15pt;
+color: #178918;
+font-weight:bold;
 }
-
 #id-item img{
-  width: 300px;
+width: 300px;
 }
-
 #rightbar {
-  float: right;
-  width:150px;
-  
+float:right;
+width:10%;
+text-align:center;
 }
-
 #showname {
-  margin-top:80px;
-  height: 100px;
-  width: 1000px;
-  margin: 0 auto;
-  font-size: 40pt;
-  font-family: 微軟正黑體;
-  text-align:center;
-  color: #178918;
-  font-weight:bold;
+margin-top:80px;
+height: 100px;
+width: 1000px;
+margin: 0 auto;
+font-size: 40pt;
+font-family: 微軟正黑體;
+text-align:center;
+color: #178918;
+font-weight:bold;
 }
-
 #showcontext {
-  width: 1000px;
-  height: auto;
-  margin: 0 auto;
-  box-shadow: 8px 8px 16px 8px rgba(51, 51, 102, 0.5);
-  border-radius: 10px;
-  border-style:solid;
-  border-width:20px;
-  border-color:white;
-  background-color: white;
+width: 1000px;
+height: auto;
+margin: 0 auto;
+box-shadow: 8px 8px 16px 8px rgba(51, 51, 102, 0.5);
+border-radius: 10px;
+border-style:solid;
+border-width:20px;
+border-color:white;
+background-color: white;
 }
-
 #showmedia {
-  float: left;
-  width: 600px;
-  border-style: solid;
-  border-color: white;
-  border-width: 5px;
+float: left;
+width: 600px;
+border-style: solid;
+border-color: white;
+border-width: 5px;
 }
-
 #showteam {
-  float: left;
-  width: 350px;
-  min-height: 300px;
-  background-color:#F8E6D4;
-  border-style: solid;
-  border-color: #F8E6D4;
-  border-width: 15px;
-  border-radius: 10px; 
+float: left;
+width: 350px;
+min-height: 300px;
+background-color:#F8E6D4;
+border-style: solid;
+border-color: #F8E6D4;
+border-width: 15px;
+border-radius: 10px; 
 }
-
 #showsummary {
-  width: 600px;
+width: 600px;
 }

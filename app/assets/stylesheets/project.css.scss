@@ -1,9 +1,15 @@
 // Place all the styles related to the project controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+#show {
+  margin: 0 auto;
+}
+#item {
+  width:145px;
+  height:50px;
+}
 #container {
-  margin:0 auto; 
+  margin:0 auto;
 }
 #id-item {
   width: 300px;
@@ -25,6 +31,12 @@
 
 #id-item img{
   width: 300px;
+}
+
+#rightbar {
+  float: right;
+  width:150px;
+  
 }
 
 #showname {

@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#index{
-width:80%;
-margin: 0 auto;
-}
 #show {
 margin: 0 auto;
 
@@ -16,6 +12,7 @@ height:50px;
 float:left;
 }
 #container {
+top:40px;
 width:80%;
 margin: 0 auto;
 border-right-style:solid;
@@ -41,9 +38,7 @@ font-weight:bold;
 #id-item img{
 width: 300px;
 }
-#rightbar {
-float:right;
-width:10%;
+#topbar {
 text-align:center;
 }
 #showname {

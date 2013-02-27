@@ -1,4 +1,4 @@
-/**
+ /*
  * jQuery Masonry v2.1.07
  * A dynamic layout plugin for jQuery
  * The flip-side of CSS Floats
@@ -80,7 +80,7 @@
     isRTL: false,
     isFitWidth: false,
     containerStyle: {
-      position: 'relative'
+      position: 'absolute'
     }
   };
 

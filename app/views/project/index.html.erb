@@ -1,5 +1,4 @@
-<div id="index">
-  <div id="rightbar">
+  <div id="topbar">
     <div id="item">正在進行</div>
     <div id="item">成功募集</div>
     <div id="item">募集失敗</div>
@@ -12,6 +11,7 @@
     <div id="item">科技應用</div>
     <div id="item">美食饗宴</div>
   </div>
+
   <div id="container"> 
     <div>
       <% @allproject.each do |p|%>
@@ -27,5 +27,20 @@
       <% end %>
     </div>
   </div>
-</div>
+
+
+<script>
+	
+$(function(){
+      var $container = $('#container');
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector : '.item',
+      isAnimated: true,
+      isFitWidth: true,
+      columnWidth : 30	  	
+    });	  	
+  });	  	
+});	  	
+</script>
 

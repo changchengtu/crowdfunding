@@ -1,3 +1,46 @@
 // Place all the styles related to the manager controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#Mshowname {
+  margin-top:80px;
+  height: 100px;
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 40pt;
+  font-family: 微軟正黑體;
+  text-align:center;
+  color: #178918;
+  font-weight:bold;
+}
+#Mshowcontext {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 8px 8px 16px 8px rgba(51, 51, 102, 0.5);
+  border-radius: 10px;
+  border-style:solid;
+  border-width:20px;
+  border-color:white;
+  background-color: white;
+}
+#Mshowmedia {
+  float: left;
+  width: 600px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+#Mshowteam {
+  float: left;
+  width: 350px;
+  min-height: 300px;
+  background-color:#F8E6D4;
+  border-style: solid;
+  border-color: #F8E6D4;
+  border-width: 15px;
+  border-radius: 10px;
+}
+#Mshowsummary {
+  width: 600px;
+}

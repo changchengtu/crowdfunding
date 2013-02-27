@@ -1,2 +1,20 @@
+<div id="Mshowname">
+  <%= @confirm.Pname%>
+</div>
+<div id="Mshowcontext">
+  <div id="Mshowmedia">
+    <img src=<%= @confirm.Ppic%> width="590px">
+  </div>
+
+  <div id="Mshowteam">
+    <%= @confirm.Pintro%>
+  </div>
+
+  <div id="Mshowsummary">
+    <%= simple_format @confirm.Psummary%>
+  </div>
+</div>
+
+
 <%= @confirm.Pname%>
 <%= link_to "on", "/manager/updatepro/"+@confirm.id.to_s, :method=>:put%>

@@ -4,8 +4,9 @@ Crowdfunding::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "project#index"
+  root :to => "project#reflashindex"
 
+  get "project/reflashindex/:page"=>"project#reflashindex"
   get "project/aboutus"=>"project#aboutus"
   resources :project
 

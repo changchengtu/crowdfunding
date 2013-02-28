@@ -5,7 +5,16 @@
     <%= text_field :start, :Pname, :value=>"啥東東"%></br>
 
     <%= label :start, :Pclassify, '專案類別：'%>
-    <%= select :start, :Pclassify, ['設計商品','音樂影視','舞台演出','休閒娛樂','創作出版','社會文化','科技應用','美食饗宴'] %></br>
+    <select id="start_Pclassify" name="start[Pclassify]">
+      <option value="1">設計商品</option>
+      <option value="2">音樂影視</option>
+      <option value="3">舞台演出</option>
+      <option value="4">休閒娛樂</option>
+      <option value="5">創作出版</option>
+      <option value="6">社會文化</option>
+      <option value="7">科技應用</option>
+      <option value="8">美食饗宴</option>
+    </select>
 
     <%= label :start, :Pgoal, '集資目標：'%>
     <%= text_field :start, :Pgoal, :value=>0%></br>

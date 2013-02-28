@@ -1,0 +1,33 @@
+<%=render :partial => 'classify'%>
+
+  <div id="container">
+    <div>
+      <% @allproject.each do |p|%>
+      <div id="id-item" class="item">
+        <div id="id-item-name">
+          <%= simple_format p.Pname%>
+        </div>
+        <center><a href=<%=project_path(p.id)%>><img src=<%=p.Ppic%>></a></center>
+        <div id="id-item-describe">
+          <%= simple_format p.Pdescribe%>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+<script>
+        
+$(function(){
+      var $container = $('#container');
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector : '.item',
+      isAnimated: true,
+      isFitWidth: true,
+      columnWidth : 30          
+    });         
+  });           
+});             
+</script>

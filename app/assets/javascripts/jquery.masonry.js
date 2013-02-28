@@ -80,7 +80,7 @@
     isRTL: false,
     isFitWidth: false,
     containerStyle: {
-      position: 'absolute'
+      position: 'relative'
     }
   };
 

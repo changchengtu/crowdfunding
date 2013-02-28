@@ -13,4 +13,8 @@ class ProjectController < ApplicationController
 
   def create
   end
+
+  def aboutus
+  end
+
 end

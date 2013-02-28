@@ -36,14 +36,12 @@
 		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >已上架專案</div>
 		<div style="background-color:; border-radius:10px; width:100%; ">
 	
-			<% @userprono.each do |pro| %>
+			<% @userproon.each do |pro| %>
        			<a href=<%=project_path(pro.id)%>><%= simple_format pro.Pname%>
-      		<hr style="width: 80%; border-color:#104E8B;border:0.5;">
+		  <hr style="width: 80%; border-color:#104E8B;border:0.5;">
 			<%end%>
 		</div>
 	</div>
-	
-
 </div>
 </center>
 

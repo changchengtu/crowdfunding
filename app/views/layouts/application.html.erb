@@ -11,6 +11,7 @@
   <%= javascript_include_tag "SimpleTextEditor.js" %>
 </head>
 <body onresize = "adjustWidth()">
+
 <div id="top-bar">
   <ul><font face="微軟正黑體">
 
@@ -40,6 +41,9 @@
 </div>
 
 <div id="main">
+<p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
   <%= yield %>
 </div>
 

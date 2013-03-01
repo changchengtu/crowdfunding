@@ -25,7 +25,7 @@ class ProjectController < ApplicationController
     elsif page == '2' 
       @allproject = Pro.where(:Pclassify=>"2")
     elsif page == '3'
-      @alllproject = Pro.where(:Pclassify=>"3")
+      @allproject = Pro.where(:Pclassify=>"3")
     elsif page == '4'
       @allproject = Pro.where(:Pclassify=>"4")
     elsif page == '5'

@@ -2,6 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#index{
+  margin: 0px auto;
+  width:1050px;
+  height:auto;
+
+}
+
+#index_notyet{
+  margin:5px;
+  padding-top:5px;
+  float:left;
+  width:300px;
+  height: auto;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-width:15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+}
+
+
+#index_request{
+  margin:5px;
+  padding-top:5px;
+  float:left;
+  width:300px;
+  height: auto;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-width:15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+}
+
+#index_already{
+  margin:5px;
+  padding-top:5px;
+  float:left;
+  width:300px;
+  height: auto;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-width:15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+}
+  
 #Mshowname {
   margin-top:80px;
   height: 100px;

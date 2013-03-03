@@ -1,9 +1,10 @@
 <div id="Mshowname">
   <%= @confirm.Pname%>
+  <%= @confirm.user.email%>
 </div>
 <div id="Mshowcontext">
   <div id="Mshowmedia">
-    <img src=<%= @confirm.Ppic%> width="590px">
+    <%= @confirm.Pvideo.html_safe%>
   </div>
 
   <div id="Mshowteam">

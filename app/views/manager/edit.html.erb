@@ -18,6 +18,7 @@ background-color: white;
 	<div><p><b>專案摘要：</b></p><%=simple_format @presub.Psummary%></div>
 	<div><p><b>回餽方案：</b></p><%=simple_format @presub.Pfeedback%></div>
 	<div><p><b>使用者名稱：</b></p><%=@presub.user.name%></div>
+	<div><p><b>使用者信箱：</b></p><%=@presub.user.email%></div>
 </div>
 
   <%= form_tag manager_path(@presub.id),:method=>:put  do %>

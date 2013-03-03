@@ -12,11 +12,12 @@ margin: 0 auto;
 #item {
 margin-right:7px;
 width:80px;
-height:40px;
+height:30px;
 float:left;
 font-family: 微軟正黑體;
 }
 #container {
+  clear:both;
 top:15px;
 width:80%;
 margin: 0 auto;
@@ -44,20 +45,17 @@ font-weight:bold;
 #id-item img{
 width: 300px;
 }
+
 #topbar1 {
-margin:0 auto;
+
+text-align:center;
 height:40px;
-width:800px;
 }
+
 #topbar2 {
-clear:both;
-margin:0 auto;
-height:55px;
-width:800px;
-padding:10px;
-border-top-style:dashed;
-border-width:1px;
-border-color:#8B3A3A;
+height:auto;
+background-color: red;
+
 }
 #showname {
 margin-top:80px;

@@ -1,15 +1,30 @@
+<style>
+#editContent{
 
-                         <div style="border-style:solid">
-                                <div><p>團隊介紹</p><%=simple_format @presub.Pintro%></div>
-                                <div><p>專案摘要</p><%=simple_format @presub.Psummary%></div>
-                                <div><p>回餽方案</p><%=simple_format @presub.Pfeedback%></div>
-                                <div><p>使用者名稱</p><%=@presub.user.name%></div>
-                         </div>
+width: 45%;
+margin: 0 auto; 
+font-family: 微軟正黑體;
+box-shadow: 0px 0px 16px 8px rgba(51, 51, 102, 0.5);
+border-radius: 10px;
+border-style:solid;
+border-width:20px;
+border-color:white;
+background-color: white;
+}
+</style>
+
+<div id="editContent">
+	<div><p><b>團隊介紹：</b></p><%=simple_format @presub.Pintro%></div>
+	<div><p><b>專案摘要：</b></p><%=simple_format @presub.Psummary%></div>
+	<div><p><b>回餽方案：</b></p><%=simple_format @presub.Pfeedback%></div>
+	<div><p><b>使用者名稱：</b></p><%=@presub.user.name%></div>
+</div>
 
   <%= form_tag manager_path(@presub.id),:method=>:put  do %>
-
+	<div align="center" style="margin-top: 20px; font-family: 微軟正黑體;">
         <%= label :confirm, :confirm, '合格？'%>
         <%= select :confirm, :confirm,[nil,true,false]%>
 
         <%= submit_tag '確定'%>
+	</div>
   <% end%>

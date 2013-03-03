@@ -1,3 +1,14 @@
+<style>
+#classify{
+	float: right; 
+	font-size:15px; 
+	color:#68838B;
+	font-family: 微軟正黑體;
+}
+</style>
+
+
+
 <%=render :partial => 'classify'%>
 
   <div id="container">
@@ -8,29 +19,30 @@
           <%= simple_format p.Pname%>
         </div>
         <center><a href=<%=project_path(p.id)%>><img src=<%=p.Ppic%>></a></center>
-	<div>發起者：<%= p.user.name%></div>
+	<div style="float: left; font-size:15px;color:#607B8B; font-family: 微軟正黑體;">發起者：<%= p.user.name%></div>
         <% case p.Pclassify%>
   	  <%when '1'%>
-    	    <div>分類：設計商品</div>
+    	    <div id="classify">分類：設計商品</div>
   	  <%when '2'%>
-    	    <div>分類：音樂影視</div>
+    	    <div id="classify">分類：音樂影視</div>
   	  <%when '3'%>
-    	    <div>分類：舞台演出</div>
+    	    <div id="classify">分類：舞台演出</div>
   	  <%when '4'%>
-    	    <div>分類：休閒娛樂</div>
+    	    <div id="classify">分類：休閒娛樂</div>
   	  <%when '5'%>
-    	    <div>分類：創作出版</div>
+    	    <div id="classify">分類：創作出版</div>
   	  <%when '6'%>
-    	    <div>分類：社會文化</div>
+    	    <div id="classify">分類：社會文化</div>
   	  <%when '7'%>
-    	    <div>分類：科技應用</div>
+    	    <div id="classify">分類：科技應用</div>
   	  <%when '8'%>
-    	    <div>分類：美食饗宴</div>
+    	    <div id="classify">分類：美食饗宴</div>
 	<% end %>
-        <div id="id-item-describe">
+	</br>
+        <div id="id-item-describe" style="clear:both; font-family: 微軟正黑體;">
           <%= simple_format p.Pdescribe%>
         </div>
-	<div>剩餘天數：<%= p.days%></div>
+	<div style="font-size:17px; color:#53868B; font-family: 微軟正黑體;">剩餘天數：<%= p.days%></div>
       </div>
       <% end %>
     </div>

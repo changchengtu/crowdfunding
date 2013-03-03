@@ -4,7 +4,7 @@
 
 #index{
   margin: 0px auto;
-  width:1050px;
+  width:90%;
   height:auto;
 
 }
@@ -13,7 +13,7 @@
   margin:5px;
   padding-top:5px;
   float:left;
-  width:300px;
+  width:30%;
   height: auto;
   background-color:white;
   border-style:solid;
@@ -28,7 +28,7 @@
   margin:5px;
   padding-top:5px;
   float:left;
-  width:300px;
+  width:30%;
   height: auto;
   background-color:white;
   border-style:solid;
@@ -42,7 +42,7 @@
   margin:5px;
   padding-top:5px;
   float:left;
-  width:300px;
+  width:30%;
   height: auto;
   background-color:white;
   border-style:solid;
@@ -93,4 +93,17 @@
 }
 #Mshowsummary {
   width: 600px;
+}
+
+#projectOn{
+  font-size: 20pt;
+  font-family: 微軟正黑體;
+  clear:both;
+  width:100px;
+  height:40px;
+  margin:30px;
+  background-color:#FA8072;
+  text-align:center;
+  border-radius: 20px;
+  border-color:#FA8072;
 }

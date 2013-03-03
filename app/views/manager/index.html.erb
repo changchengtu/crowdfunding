@@ -1,12 +1,13 @@
 <div id="index">
 <div id="index_notyet" align="center">
 ~ 未審核專案 ~
-<div>
-    <table>
+<div style="width: 100%;">
+    <table style="text-align: center;">
         <thead>
 		<th>專案名稱</th>
 		<th>專案分類</th>
 		<th>募集目標</th>
+		
         </thead>
          <tbody>
 		<% @allpresub.each do |presub| -%>
@@ -25,11 +26,12 @@
 <div id="index_request" align="center">
 ~ 請求上架 ~
 <div>
-    <table>
+    <table style="text-align: center;">
         <thead>
                 <th>專案名稱</th>
                 <th>專案分類</th>
                 <th>募集目標</th>
+
         </thead>
          <tbody>
                 <% @allreadytoon.each do |on| -%>
@@ -48,7 +50,7 @@
 <div id="index_already" align="center">
 ~ 已上架專案 ~
 <div>
-    <table>
+    <table style="text-align: center;">
         <thead>
                 <th>專案名稱</th>
                 <th>專案分類</th>

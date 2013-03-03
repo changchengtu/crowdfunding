@@ -13,6 +13,7 @@ class CreatePros < ActiveRecord::Migration
       t.boolean :PuserOn
       t.boolean :PmanagerOn
       t.integer :days
+      t.integer :Pgot
 
       t.references :user
       t.references :presub

@@ -10,21 +10,21 @@
         <center><a href=<%=project_path(p.id)%>><img src=<%=p.Ppic%>></a></center>
 	<div>發起者：<%= p.user.name%></div>
         <% case p.Pclassify%>
-  	  <%when 1%>
+  	  <%when '1'%>
     	    <div>分類：設計商品</div>
-  	  <%when 2%>
+  	  <%when '2'%>
     	    <div>分類：音樂影視</div>
-  	  <%when 3%>
+  	  <%when '3'%>
     	    <div>分類：舞台演出</div>
-  	  <%when 4%>
+  	  <%when '4'%>
     	    <div>分類：休閒娛樂</div>
-  	  <%when 5%>
+  	  <%when '5'%>
     	    <div>分類：創作出版</div>
-  	  <%when 6%>
+  	  <%when '6'%>
     	    <div>分類：社會文化</div>
-  	  <%when 7%>
+  	  <%when '7'%>
     	    <div>分類：科技應用</div>
-  	  <%when 8%>
+  	  <%when '8'%>
     	    <div>分類：美食饗宴</div>
 	<% end %>
         <div id="id-item-describe">

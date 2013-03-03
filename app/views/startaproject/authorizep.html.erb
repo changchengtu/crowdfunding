@@ -1,25 +1,28 @@
 <div id="main_authorizep">
 </br>
-<%= form_tag "updatep/"+@pro.id.to_s ,:method=>:put do %>
-<%= label :content, :Ppic, '封面圖片'%>
-<%= text_field :content, :Ppic, :value=>@pro.Ppic%>
-</br>
-<%= label :content, :Pdescribe, '專案說明'%>
-<%= text_field :content, :Pdescribe, :value=>@pro.Pdescribe%>
-</br>
-<%= label :content, :Pintro, '團隊介紹'%></br>
-<%= text_area :content, :Pintro, :value=>@pro.Pintro%>
-</br>
-<%= label :content, :Psummary, '專案內容'%></br>
-<%= text_area :content, :Psummary, :value=>@pro.Psummary%>
-</br>
-<%= label :content, :Pfeedback, '投資回餽'%></br>
-<%= text_area :content, :Pfeedback, :value=>@pro.Pfeedback%>
-<center>
-</br>
-<%= label :content, :PuserOn, '上架'%>
-<%= select :content, :PuserOn, [false,true]%>
-<input name="commit" type="submit" value="確定" id="button-id" onClick="ste.submit()">
+  <%= form_tag "updatep/"+@pro.id.to_s ,:method=>:put do %>
+    <%= label :content, :Ppic, '封面圖片'%>
+    <%= text_field :content, :Ppic, :value=>@pro.Ppic%>
+    </br>
+    <%= label :content, :Pvideo, '專案影片'%>
+    <%= text_field :content, :Pvideo, :value=>@pro.Pvideo%>
+    </br>
+    <%= label :content, :Pdescribe, '專案說明'%>
+    <%= text_field :content, :Pdescribe, :value=>@pro.Pdescribe%>
+    </br>
+    <%= label :content, :Pintro, '團隊介紹'%></br>
+    <%= text_area :content, :Pintro, :value=>@pro.Pintro%>
+    </br>
+    <%= label :content, :Psummary, '專案內容'%></br>
+    <%= text_area :content, :Psummary, :value=>@pro.Psummary%>
+    </br>
+    <%= label :content, :Pfeedback, '投資回餽'%></br>
+    <%= text_area :content, :Pfeedback, :value=>@pro.Pfeedback%>
+    <center>
+    </br>
+    <%= label :content, :PuserOn, '上架'%>
+    <%= select :content, :PuserOn, [false,true]%>
+    <input name="commit" type="submit" value="確定" id="button-id" onClick="ste.submit()">
 </center>
 <% end%>
 </div>

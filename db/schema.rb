@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
     t.string   "Pclassify"
     t.integer  "Pgoal"
     t.text     "Ppic"
+    t.string   "Pvideo"
     t.string   "Pdescribe"
     t.text     "Pintro"
     t.text     "Psummary"

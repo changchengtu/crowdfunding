@@ -27,9 +27,6 @@ class StartaprojectController < ApplicationController
 
   def updatep                       #更新上架專案
     @pro = Pro.find(params[:id])
-    if @pro.PuserOn = true
-      params[:content][:start] = Time.now
-    end
     @pro.update_attributes!(params[:content])
     redirect_to startaproject_index_path
   end

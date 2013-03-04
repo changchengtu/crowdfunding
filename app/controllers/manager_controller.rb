@@ -42,7 +42,8 @@ class ManagerController < ApplicationController
 
   def updatepro
     @state = Pro.find(params[:id])
-    @state.update_attributes!(:PmanagerOn=>true)
+    @state.update_attributes!(:PmanagerOn=>true, :start=>Time.now)
+
     
     
     redirect_to manager_index_path

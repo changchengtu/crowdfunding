@@ -6,7 +6,7 @@ class ManagerController < ApplicationController
       sleep 1
       all = Pro.where("days > 0").all
       all.each do |data|
-        data.update_attributes!(:days=>(Time.now.to_date-data.start.to_date).to_i)
+        data.update_attributes!(:days=>(30-(Time.now.to_date-data.start.to_date).to_i))
       end
     end
   end

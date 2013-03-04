@@ -4,7 +4,7 @@ class ManagerController < ApplicationController
   t = Thread.new do                                #每隔一天減少以上架專案中的天數
     while(true) do
       sleep 1
-      all = Pro.where("days > 0 AND PmanagerOn = ?", true).all
+      all = Pro.where("days > 0").all
       all.each do |data|
         data.update_attributes!(:days=>(Time.now.to_date-data.start.to_date).to_i)
       end

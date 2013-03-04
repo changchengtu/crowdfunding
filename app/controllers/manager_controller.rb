@@ -7,7 +7,7 @@ class ManagerController < ApplicationController
       sleep 60
       all = Pro.where("days > 0 AND PmanagerOn = ?", true).all
       all.each do |data|
-        leftdays = (Date.parse(Pro.start)-Date.parse(Time.now)).to_i
+        leftdays = (Date.parse(data.start)-Date.parse(Time.now)).to_i
         data.update_attributes!(:days=>leftdays)
       end
     end

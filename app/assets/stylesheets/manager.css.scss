@@ -54,8 +54,8 @@
   
 #Mshowname {
   margin-top:80px;
-  height: 100px;
-  width: 1000px;
+  height: 70px;
+
   margin: 0 auto;
   font-size: 40pt;
   font-family: 微軟正黑體;
@@ -63,7 +63,18 @@
   color: #178918;
   font-weight:bold;
 }
+#Mshowemail{
+  clear:both;
+  margin:0 auto;
+  text-align:center;
+  font-family: 微軟正黑體; 
+  font-size:20px;
+  color:#607B8B;
+  margin-bottom:20px;
+}
 #Mshowcontext {
+  
+  clear:both;
   width: 1000px;
   height: auto;
   margin: 0 auto;

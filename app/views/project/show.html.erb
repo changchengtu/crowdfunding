@@ -6,9 +6,14 @@
     <%= @thisp.Pvideo.html_safe%>
   </div>
 
+  <div style="font-family: 微軟正黑體; float: left; font-size:15px;color:#607B8B;">
+	發起者：<%= @thisp.user.name%>
+  </div>
+  <div style="font-family: 微軟正黑體; float: right; font-size:15px;color:#607B8B;">
+    e-mail：<%= @thisp.user.email%>
+  </div>
+
   <div id="showteam">
-    <%= @thisp.user.name%>
-    <%= @thisp.user.email%>
     <%= @thisp.Pintro%>
   </div>
 

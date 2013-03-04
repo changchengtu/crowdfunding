@@ -27,7 +27,7 @@ class StartaprojectController < ApplicationController
 
   def updatep                       #更新上架專案
     @pro = Pro.find(params[:id])
-    if @pro.Puseron = true
+    if @pro.PuserOn = true
       params[:content].start = Time.now
     end
     @pro.update_attributes!(params[:content])

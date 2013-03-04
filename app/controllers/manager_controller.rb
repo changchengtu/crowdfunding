@@ -1,14 +1,13 @@
-require 'date'
+
 class ManagerController < ApplicationController
   before_filter :authenticate_admin!
-
+  require 'date'
   t = Thread.new do                                #每隔一天減少以上架專案中的天數
     while(true) do
       sleep 60
       all = Pro.where("days > 0 AND PmanagerOn = ?", true).all
       all.each do |data|
-        leftdays = (Date.parse(data.start)-Date.parse(Time.now)).to_i
-        data.update_attributes!(:days=>leftdays)
+        data.update_attributes!(:days=>(Time.now.to_date-data.start.to_date).to_i)
       end
     end
   end

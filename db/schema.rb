@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
     t.boolean  "PuserOn"
     t.boolean  "PmanagerOn"
     t.integer  "days"
+    t.integer  "Pgot"
+    t.string   "start"
     t.integer  "user_id"
     t.integer  "presub_id"
     t.datetime "created_at", :null => false

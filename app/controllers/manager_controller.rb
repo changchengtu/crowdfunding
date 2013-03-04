@@ -4,7 +4,7 @@ class ManagerController < ApplicationController
 
   t = Thread.new do                                #每隔一天減少以上架專案中的天數
     while(true) do
-      sleep 3600
+      sleep 60
       all = Pro.where("days > 0 AND PmanagerOn = ?", true).all
       all.each do |data|
         leftdays = (Date.parse(Pro.start)-Date.parse(Time.now)).to_i

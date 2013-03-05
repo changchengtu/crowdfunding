@@ -14,7 +14,8 @@ class CreatePros < ActiveRecord::Migration
       t.boolean :PmanagerOn
       t.integer :days
       t.integer :Pgot
-      t.string :start 
+      t.string :start
+      t.string :goaldays 
 
       t.references :user
       t.references :presub

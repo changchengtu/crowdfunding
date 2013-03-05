@@ -92,51 +92,68 @@
 }
 
 #uncheck{
-  background-color:#FFFFFF;
-  float:left;
-  width:30%;
-  border-radius: 5px;
-  height: auto;
   margin:5px;
-  
+  padding-top:5px;
+  float:left;
+  width:27%;
+  height: auto;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+
 }
 
 #checkOK{
-  background-color:#FFFFFF;
+  margin:5px;
+  padding-top:5px;
   float:left;
-  width:30%;
+  width:35%;
   height: auto;
-  margin: 5px;
-  border-radius: 5px;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
 
 #checkNotOK{
-  background-color:#FFFFFF;
+  margin:5px;
+  padding-top:5px;
   float:left;
-  width:30%;
+  width:27%;
   height: auto;
-  margin: 5px;
-  border-radius: 5px;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
 
 #newProject{
+  margin-right:60px;
   width:100px;
   text-align:center;
-  background-color:#DC143C;
+  background-color:#C1CDCD;
   height:50px;
   line-height: 50px;
   border-radius: 5px;   
   margin-top: 10px;
+  border-style:solid;
+  border-color:#C1CDCD;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 2px rgba(20%,20%,40%,0.5);
 }
 
 #newProject a{
   list-style-type:none;
   font-size: 18px; 
-  color:white;
+  color:black;
   text-decoration: none;
 }
 #newProject a:hover{
-  color:#000000;
+  color:#FF4500;
 }
 
 #projectUp a{
@@ -152,12 +169,16 @@
 #main_authorizep{
   width:600px;
   margin: 0 auto;
+  font-size:11pt;
+  font-family:微軟正黑體;
+  
 }
 
 #main_authorizep label{
   width:100px;
   font-size:13pt;
   font-family:微軟正黑體;
+  color:block;
 }
 
 #content_Ppic{

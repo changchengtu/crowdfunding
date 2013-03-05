@@ -6,7 +6,7 @@ class ManagerController < ApplicationController
       sleep 600
       all = Pro.where("days > 0").all
       all.each do |data|
-        data.update_attributes!(:days=>(30-(Time.now.to_date-data.start.to_date).to_i))
+        data.update_attributes!(:days=>(data.goaldays-(Time.now.to_date-data.start.to_date).to_i))
       end
     end
   end
@@ -30,7 +30,7 @@ class ManagerController < ApplicationController
     @confirm.update_attributes!(params[:confirm])
    
     if @confirm.confirm
-      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false, :days=>30)
+      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false, :goaldays=>40)
     end
     redirect_to manager_index_path
   end

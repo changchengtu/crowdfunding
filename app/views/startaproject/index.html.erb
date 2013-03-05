@@ -1,47 +1,54 @@
-
-<div id="newProject" align="right" ><%= link_to "新增專案", new_startaproject_path %></div>
+<center>
+<div id="newProject"><%= link_to "新增專案", new_startaproject_path %></div>
+</center>
 
 <center>
 <div id="content-all" align="center">
 	
 	<div id="uncheck">
-		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >未審核</div>
-		<div style="background-color:; border-radius:10px; width:100%; ">
+		~ 未審核 ~
+		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 
 			<% @userpresubunconfirm.each do |presub| %>
 			<%=simple_format presub.Pname%>
-			<hr style="width: 80%; border-color:#104E8B;border:0.5;">
+			
 			<%end%>
-		</div>
 	</div>
 
 
 	<div id="checkOK">
-		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >合格</div>
-		<div style="background-color:; border-radius:10px; width:100%; ">
-			
-			<% @usercanonproject.each do |pro| %>
-			<div style="float: left; width: 45%;">
-				<%=simple_format pro.Pname%></div>
-      		<div id="projectUp" style="float: center; width: 45%;height: 50px;line-height: 50px;">  
-      			<%= link_to "專案上架","startaproject/authorizep/"+pro.id.to_s %></div>
+		~ 合格 ~
+		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
+		<div id="projectUp" style=" width: 100%;"> 
+			<table style="text-align: center;">
+				<tbody>
+					<% @usercanonproject.each do |pro| %>				
+				<tr>
+					<td style="padding-right:60px;"><%=simple_format pro.Pname%></td>
+      		 
+      				<td><%= link_to "專案上架","startaproject/authorizep/"+pro.id.to_s %></td>	
+      			</tr>
+      		
+					<%end%>
+				</tbody>
+      		</table>
+      	</div>
         	
-       		 <hr style="width: 80%; border-color:#104E8B;border:0.5;">
-			<%end%>
-		</div>
 	</div>
 
 
 	<div id="checkNotOK">
-		<div style=" width:100%; line-height: 50px; border-radius:5px;background-color: #DC143C; height: 50px; color: white;" >已上架專案</div>
-		<div style="background-color:; border-radius:10px; width:100%; ">
+		~ 已上架專案 ~
+		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 	
 			<% @userproon.each do |pro| %>
        			<a href=<%=project_path(pro.id)%>><%= simple_format pro.Pname%>
-		  <hr style="width: 80%; border-color:#104E8B;border:0.5;">
+
 			<%end%>
-		</div>
+
 	</div>
 </div>
 </center>
+
+
 

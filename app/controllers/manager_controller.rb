@@ -3,7 +3,7 @@ class ManagerController < ApplicationController
   before_filter :authenticate_admin!
   t = Thread.new do                                #每隔一天減少以上架專案中的天數
     while(true) do
-      sleep 1
+      sleep 60
       all = Pro.where("days > 0").all
       all.each do |data|
         data.update_attributes!(:days=>(data.goaldays-(Time.now.to_date-data.start.to_date).to_i))

@@ -3,7 +3,7 @@ class ManagerController < ApplicationController
   before_filter :authenticate_admin!
   t = Thread.new do                                #每隔一天減少以上架專案中的天數
     while(true) do
-      sleep 60
+      sleep 1
       all = Pro.where("days > 0").all
       all.each do |data|
         data.update_attributes!(:days=>(data.goaldays-(Time.now.to_date-data.start.to_date).to_i))
@@ -30,7 +30,7 @@ class ManagerController < ApplicationController
     @confirm.update_attributes!(params[:confirm])
    
     if @confirm.confirm
-      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false, :goaldays=>40)
+      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false, :goaldays=>40, :days=>40)
     end
     redirect_to manager_index_path
   end

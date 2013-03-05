@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
     t.integer  "days"
     t.integer  "Pgot"
     t.string   "start"
+    t.integer  "goaldays"
     t.integer  "user_id"
     t.integer  "presub_id"
     t.datetime "created_at", :null => false
@@ -86,6 +87,10 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.string   "name"
     t.string   "phone"
     t.datetime "created_at",                             :null => false

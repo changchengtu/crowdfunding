@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-a { text-decoration: none }
+a { text-decoration: none; color:#53868B;}
 a:hover {color:#CD2626}  
+
 
 #show {
 margin: 0 auto;
@@ -21,10 +22,10 @@ font-family: 微軟正黑體;
 top:15px;
 width:80%;
 margin: 0 auto;
-padding-top:15px;
-border-top-style:solid;
+padding-top:20px;
+border-top-style:inset;
 border-width:1px;
-border-color:#CCCCCC;
+border-color:#696969;
 }
 #id-item {
 width: 300px;
@@ -39,7 +40,7 @@ box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
 #id-item-name {
 font-size: 15pt;
-color: #d44413;
+color: #F07830;
 font-weight:bold;
 }
 #id-item img{
@@ -47,7 +48,6 @@ width: 300px;
 }
 
 #topbar1 {
-
 text-align:center;
 height:40px;
 }
@@ -55,6 +55,8 @@ height:40px;
 #topbar2 {
 height:auto;
 background-color: red;
+margin-bottom:20px;
+vertical-align:middle;
 
 }
 #showname {
@@ -65,8 +67,8 @@ margin: 0 auto;
 font-size: 40pt;
 font-family: 微軟正黑體;
 text-align:center;
-color: #d44413;
-font-weight:bold;
+color: #F07830;
+
 }
 #showcontext {
 width: 1000px;

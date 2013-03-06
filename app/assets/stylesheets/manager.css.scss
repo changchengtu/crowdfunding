@@ -38,6 +38,12 @@
   box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
 }
 
+#index_request a{
+  color:green;
+}
+#index_request a:hover{
+  color:#d44413;
+}
 #index_already{
   margin:5px;
   padding-top:5px;
@@ -55,13 +61,12 @@
 #Mshowname {
   margin-top:80px;
   height: 70px;
-
   margin: 0 auto;
   font-size: 40pt;
   font-family: 微軟正黑體;
   text-align:center;
-  color: #178918;
-  font-weight:bold;
+  color: #F07830;
+
 }
 #Mshowemail{
   clear:both;
@@ -113,8 +118,14 @@
   width:100px;
   height:40px;
   margin:30px;
-  background-color:#FA8072;
+  background-color:#d44413;
   text-align:center;
   border-radius: 20px;
-  border-color:#FA8072;
+}
+
+#projectOn a{
+  color:white;
+}
+#projectOn a:hover{
+  color:#ff8c00;
 }

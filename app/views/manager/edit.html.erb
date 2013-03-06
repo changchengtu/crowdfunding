@@ -10,15 +10,16 @@ border-style:solid;
 border-width:20px;
 border-color:white;
 background-color: white;
+color:#696969;
 }
 </style>
 
 <div id="editContent">
-	<div><p><b>團隊介紹：</b></p><%=simple_format @presub.Pintro%></div>
-	<div><p><b>專案摘要：</b></p><%=simple_format @presub.Psummary%></div>
-	<div><p><b>回餽方案：</b></p><%=simple_format @presub.Pfeedback%></div>
-	<div><p><b>使用者名稱：</b></p><%=@presub.user.name%></div>
-	<div><p><b>使用者信箱：</b></p><%=@presub.user.email%></div>
+	<div><p style="color:#8B3E2F;">團隊介紹：</p><%=simple_format @presub.Pintro%></div>
+	<div><p style="color:#8B3E2F;">專案摘要：</p><%=simple_format @presub.Psummary%></div>
+	<div><p style="color:#8B3E2F;">回餽方案：</p><%=simple_format @presub.Pfeedback%></div>
+	<div><p style="color:#8B3E2F;">使用者名稱：</p><%=@presub.user.name%></div>
+	<div><p style="color:#8B3E2F;">使用者信箱：</p><%=@presub.user.email%></div>
 </div>
 
   <%= form_tag manager_path(@presub.id),:method=>:put  do %>

@@ -11,6 +11,7 @@
 .ste .separator { width: 0px; height: 18px; border-left: #aca899 1px solid; border-right: #ffffff 1px solid; margin: 0 5px; }
 .ste .source { padding-top: 5px; }
 
+
 #presubForm {
   width:800px;
   margin: 0 auto;
@@ -97,11 +98,11 @@
   float:left;
   width:27%;
   height: auto;
-  background-color:white;
-  border-style:solid;
-  border-color:white;
   border-radius: 10px;
-  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+  box-shadow: 0px 0px 12px 1px rgba(20%,20%,40%,0.5);
+    background-color:white;
+  border-color:white;
+  border-style:solid;
 
 }
 
@@ -111,11 +112,11 @@
   float:left;
   width:35%;
   height: auto;
-  background-color:white;
-  border-style:solid;
-  border-color:white;
   border-radius: 10px;
-  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+  box-shadow: 0px 0px 12px 1px rgba(20%,20%,40%,0.5);
+    background-color:white;
+  border-color:white;
+  border-style:solid;
 }
 
 #checkNotOK{
@@ -124,32 +125,31 @@
   float:left;
   width:27%;
   height: auto;
-  background-color:white;
-  border-style:solid;
-  border-color:white;
   border-radius: 10px;
-  box-shadow: 4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+  box-shadow: 0px 0px 12px 1px rgba(20%,20%,40%,0.5);
+  background-color:white;
+  border-color:white;
+  border-style:solid;
+
 }
 
 #newProject{
   margin-right:60px;
   width:100px;
   text-align:center;
-  background-color:#C1CDCD;
   height:50px;
   line-height: 50px;
   border-radius: 5px;   
   margin-top: 10px;
-  border-style:solid;
-  border-color:#C1CDCD;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 2px rgba(20%,20%,40%,0.5);
+ background-color:#d44413;
 }
 
 #newProject a{
   list-style-type:none;
   font-size: 18px; 
-  color:black;
+  color:white;
   text-decoration: none;
 }
 #newProject a:hover{

@@ -30,7 +30,7 @@ class ManagerController < ApplicationController
     @confirm.update_attributes!(params[:confirm])
    
     if @confirm.confirm
-      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false, :goaldays=>40, :days=>40)
+      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false)
     end
     redirect_to manager_index_path
   end
@@ -41,7 +41,7 @@ class ManagerController < ApplicationController
 
   def updatepro
     @state = Pro.find(params[:id])
-    @state.update_attributes!(:PmanagerOn=>true, :start=>Time.now)
+    @state.update_attributes!(:PmanagerOn=>true, :start=>Time.now, :goaldays=>40, :days=>40)
 
     
     

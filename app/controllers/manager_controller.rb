@@ -30,7 +30,7 @@ class ManagerController < ApplicationController
     @confirm.update_attributes!(params[:confirm])
    
     if @confirm.confirm
-      Pro.create(:name=>params[:confrim][:name], :classify=>@confirm.classify, :goal=>@confirm.goal, :user_id=>@confirm.user_id, :useron=>false, :manageron=>false)
+      Pro.create(:name=>params[:confirm][:name], :classify=>@confirm.classify, :goal=>@confirm.goal, :user_id=>@confirm.user_id, :useron=>false, :manageron=>false)
     end
     redirect_to manager_index_path
   end

@@ -37,6 +37,12 @@ class ProjectController < ApplicationController
       @allproject = Pro.where(:Pclassify=>"7",:PmanagerOn=>true)
     elsif page == '8'
       @allproject = Pro.where(:Pclassify=>"8",:PmanagerOn=>true)
+    elsif page == '9'
+      @allproject = Pro.where("pros.PmanagerOn='t' and pros.days>0")
+    elsif page == '10'
+      @allproject = Pro.where("pros.PmanagerOn='t' and pros.Pgot>=pros.Pgoal")
+    elsif page == '11'
+      @allproject = Pro.where("pros.days=0 and pros.Pgoal>pros.Pgot")
     end
   end
 end

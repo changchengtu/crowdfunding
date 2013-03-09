@@ -9,6 +9,7 @@ class ProjectController < ApplicationController
 
   def show
 	    @thisp = Pro.find(params[:id])
+    @allinvest = Investment.where(:pro_id=>params[:id])
   end
 
   def create

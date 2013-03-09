@@ -39,6 +39,13 @@
     	    <div id="classify">分類：美食饗宴</div>
 	<% end %>
 	</br>
+	<%@progress=0%>
+        <%if (p.Pgot.to_f/(p.Pgoal.to_f+1))*100.to_i>100%>
+	  <%@progress = 100%>
+        <%else%>
+          <%@progress = (p.Pgot.to_f/(p.Pgoal.to_f+1))*100.to_i%>
+        <%end%>
+        <div style="width:<%= @progress%>%;height:10px;background-color:red;"></div>
         <div id="id-item-describe" style="clear:both; font-family: 微軟正黑體;">
           <%= simple_format p.Pdescribe%>
         </div>

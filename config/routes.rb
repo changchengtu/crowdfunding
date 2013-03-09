@@ -18,7 +18,7 @@ Crowdfunding::Application.routes.draw do
   put "manager/updatepro/:id"=>"manager#updatepro"
   resources :manager
   
-
+  resources :invest
 
   resources :test
   get "test/gettime"=>"test#getTime"

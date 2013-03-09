@@ -19,7 +19,6 @@
 </div>
 
 <center>
-<div id="projectOn">
-<%= link_to "on", "/manager/updatepro/"+@confirm.id.to_s, :method=>:put%>
-</div>
+  <a href="/manager/updatepro/<%= @confirm.id.to_s%>" data-method="put" rel="nofollow"><div id="projectOn">on</div></a>
 </center>
+

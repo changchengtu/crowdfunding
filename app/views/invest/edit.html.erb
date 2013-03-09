@@ -1,0 +1,19 @@
+<%= @thisp.Pname%></br>
+<%= @thisp.Psummary%></br>
+<%= @thisp.Pgot%></br>
+
+  <%= form_tag invest_path(@thisp.id),:method=>:put  do %>
+        <div align="center" style="margin-top: 20px; font-family: 微軟正黑體;">
+        <%= label :invest, :howMuch, 'how much?'%>
+        <%= text_field :invest, :howMuch%>
+
+        <%= label :invest, :pro_id, "投到哪個專案"%>
+        <%= text_field :invest, :pro_id, :value=>@thisp.id%>
+
+        <%= label :invest, :user_id, "誰投的"%>
+        <%= text_field :invest, :user_id, :value=>current_user.id%>
+
+        <%= submit_tag '確定'%>
+        </div>
+  <% end%>
+

@@ -80,26 +80,41 @@ border-style:solid;
 border-width:20px;
 border-color:white;
 background-color: white;
+overflow:hidden;
 }
 #showmedia {
-float: left;
-width: 600px;
-border-style: solid;
-border-color: white;
-border-width: 5px;
+width: 550px;
+
 }
-#showteam {
+#showinfo {
 margin-top:10px;
-float: left;
 width: 350px;
-min-height: 250px;
+min-height: 150px;
 background-color:#F8E6D4;
 border-style: solid;
 border-color: #F8E6D4;
 border-width: 15px;
 border-radius: 10px; 
+font-size: 30pt;
+font-family: 微軟正黑體;
+}
+#showinfo a { color:white;}
+#showinfo a:hover {color:#CCCCCC} 
+#showteam {
+clear:both;
+margin-top:10px;
+width: 350px;
+height: auto;
+background-color:#F8E6D4;
+border-style: solid;
+border-color: #F8E6D4;
+border-width: 15px;
+border-radius: 10px; 
+
 }
 #showsummary {
-width: 600px;
+margin:0 auto;
+margin-top:10px;
+width: 450px;
 }
 

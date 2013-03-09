@@ -8,7 +8,7 @@
         <%= text_field :invest, :howMuch%>
 
         <%= label :invest, :pro_id, "投到哪個專案"%>
-        <%= text_field :invest, :pro_id, :value=>@thisp.id%>
+        <%= text_field :invest, :pro_id, :value=>@thisp.select("id")%>
 
         <%= label :invest, :user_id, "誰投的"%>
         <%= text_field :invest, :user_id, :value=>current_user.id%>

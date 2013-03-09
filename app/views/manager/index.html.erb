@@ -12,9 +12,9 @@
          <tbody>
 		<% @allpresub.each do |presub| -%>
                         <tr>
-                                <td><%=presub.Pname%></td>
-				<td><%=presub.Pclassify%></td>
-				<td><%=presub.Pgoal%></td>
+                                <td><%=presub.name%></td>
+				<td><%=presub.classify%></td>
+				<td><%=presub.goal%></td>
 				<td><%=link_to "審核", edit_manager_path(presub)%></td>
                         </tr>
                 <% end-%>
@@ -36,9 +36,9 @@
          <tbody>
                 <% @allreadytoon.each do |on| -%>
                         <tr>
-                                <td><%=on.Pname%></td>
-                                <td><%=on.Pclassify%></td>
-                                <td><%=on.Pgoal%></td>
+                                <td><%=on.name%></td>
+                                <td><%=on.classify%></td>
+                                <td><%=on.goal%></td>
                                 <td><%=link_to "on", "/manager/editpro/"+on.id.to_s %></td>
                         </tr>
                 <% end-%>
@@ -59,9 +59,9 @@
          <tbody>
                 <% @allpro.each do |pro| -%>
                         <tr>
-                                <td><%=pro.Pname%></td>
-                                <td><%=pro.Pclassify%></td>
-                                <td><%=pro.Pgoal%></td>
+                                <td><%=pro.name%></td>
+                                <td><%=pro.classify%></td>
+                                <td><%=pro.goal%></td>
                         </tr>
                 <% end-%>
         </tbody>

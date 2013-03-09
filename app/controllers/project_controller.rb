@@ -1,6 +1,6 @@
 class ProjectController < ApplicationController
   def index
-    @allproject = Pro.where(:PmanagerOn=>true)
+    @allproject = Pro.where(:manageron=>true)
   end
 
   def new
@@ -20,29 +20,29 @@ class ProjectController < ApplicationController
 
   def reflashindex
     page = params[:page]
-    @allproject = Pro.where(:PmanagerOn=>true)
+    @allproject = Pro.where(:manageron=>true)
     if page == '1'
-      @allproject = Pro.where(:Pclassify=>"1",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"1",:manageron=>true)
     elsif page == '2' 
-      @allproject = Pro.where(:Pclassify=>"2",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"2",:pmanageron=>true)
     elsif page == '3'
-      @allproject = Pro.where(:Pclassify=>"3",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"3",:manageron=>true)
     elsif page == '4'
-      @allproject = Pro.where(:Pclassify=>"4",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"4",:manageron=>true)
     elsif page == '5'
-      @allproject = Pro.where(:Pclassify=>"5",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"5",:manageron=>true)
     elsif page == '6'
-      @allproject = Pro.where(:Pclassify=>"6",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"6",:manageron=>true)
     elsif page == '7'
-      @allproject = Pro.where(:Pclassify=>"7",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"7",:manageron=>true)
     elsif page == '8'
-      @allproject = Pro.where(:Pclassify=>"8",:PmanagerOn=>true)
+      @allproject = Pro.where(:classify=>"8",:manageron=>true)
     elsif page == '9'
-      @allproject = Pro.where("pros.PmanagerOn='t' and pros.days>0")
+      @allproject = Pro.where("pros.manageron='t' and pros.days>0")
     elsif page == '10'
-      @allproject = Pro.where("pros.PmanagerOn='t' and pros.Pgot>=pros.Pgoal")
+      @allproject = Pro.where("pros.manageron='t' and pros.got>=pros.goal")
     elsif page == '11'
-      @allproject = Pro.where("pros.days=0 and pros.Pgoal>pros.Pgot")
+      @allproject = Pro.where("pros.days=0 and pros.goal>pros.got")
     end
   end
 end

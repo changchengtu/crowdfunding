@@ -1,36 +1,36 @@
 <div id="main_authorizep">
 </br>
   <%= form_tag "updatep/"+@pro.id.to_s ,:method=>:put do %>
-    <%= label :content, :Ppic, '封面圖片'%>
-    <%= text_field :content, :Ppic, :value=>@pro.Ppic%>
+    <%= label :content, :pic, '封面圖片'%>
+    <%= text_field :content, :pic, :value=>@pro.pic%>
     </br>
-    <%= label :content, :Pvideo, '專案影片'%> 如何上傳？
-    <%= text_area :content, :Pvideo, :value=>@pro.Pvideo%>
+    <%= label :content, :video, '專案影片'%> 如何上傳？
+    <%= text_area :content, :video, :value=>@pro.video%>
     </br>
-    <%= label :content, :Pdescribe, '專案說明'%> 請勿超過255個字
-    <%= text_area :content, :Pdescribe, :value=>@pro.Pdescribe%>
+    <%= label :content, :describe, '專案說明'%> 請勿超過255個字
+    <%= text_area :content, :describe, :value=>@pro.describe%>
     </br>
-    <%= label :content, :Pintro, '團隊介紹'%> 請勿超過255個字</br>
-    <%= text_area :content, :Pintro, :value=>@pro.Pintro%>
+    <%= label :content, :intro, '團隊介紹'%> 請勿超過255個字</br>
+    <%= text_area :content, :intro, :value=>@pro.intro%>
     </br>
-    <%= label :content, :Psummary, '專案內容'%></br>
-    <%= text_area :content, :Psummary, :value=>@pro.Psummary%>
+    <%= label :content, :summary, '專案內容'%></br>
+    <%= text_area :content, :summary, :value=>@pro.summary%>
     </br>
-    <%= label :content, :Pfeedback, '投資回餽'%></br>
-    <%= text_area :content, :Pfeedback, :value=>@pro.Pfeedback%>
+    <%= label :content, :feedback, '投資回餽'%></br>
+    <%= text_area :content, :feedback, :value=>@pro.feedback%>
     </br>
     <%= label :content, :goaldays, '天數'%></br>
     <%= select :content, :goaldays, [15,30,45], :selected=>@pro.goaldays%>
     <center>
     </br>
-    <%= label :content, :PuserOn, '上架'%>
-    <%= select :content, :PuserOn, [false,true]%>
+    <%= label :content, :useron, '上架'%>
+    <%= select :content, :useron, [false,true]%>
     <input name="commit" type="submit" value="確定" id="button-id" onClick="ste.submit()">
 </center>
 <% end%>
 </div>
 <script> 
-var ste = new SimpleTextEditor("content_Psummary", "ste", "content[Psummary]"); 
+var ste = new SimpleTextEditor("content_summary", "ste", "content[summary]"); 
 ste.cssFile = 'test.css'; 
 ste.charset = 'iso-8859-1';
 ste.init();

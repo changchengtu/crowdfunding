@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
   create_table "investments", :force => true do |t|
-    t.integer  "toWho"
-    t.integer  "howMuch"
+    t.integer  "towho"
+    t.integer  "howmuch"
     t.boolean  "confirm"
     t.integer  "user_id"
     t.integer  "pro_id"
@@ -42,12 +42,12 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
   end
 
   create_table "presubs", :force => true do |t|
-    t.string   "Pname"
-    t.string   "Pclassify"
-    t.integer  "Pgoal"
-    t.string   "Pintro"
-    t.string   "Psummary"
-    t.string   "Pfeedback"
+    t.string   "name"
+    t.string   "classify"
+    t.integer  "goal"
+    t.string   "intro"
+    t.string   "summary"
+    t.string   "feedback"
     t.boolean  "confirm"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
@@ -55,19 +55,19 @@ ActiveRecord::Schema.define(:version => 20130301010105) do
   end
 
   create_table "pros", :force => true do |t|
-    t.string   "Pname"
-    t.string   "Pclassify"
-    t.integer  "Pgoal"
-    t.text     "Ppic"
-    t.string   "Pvideo"
-    t.string   "Pdescribe"
-    t.text     "Pintro"
-    t.text     "Psummary"
-    t.text     "Pfeedback"
-    t.boolean  "PuserOn"
-    t.boolean  "PmanagerOn"
+    t.string   "name"
+    t.string   "classify"
+    t.integer  "goal"
+    t.text     "pic"
+    t.string   "video"
+    t.string   "describe"
+    t.text     "intro"
+    t.text     "summary"
+    t.text     "feedback"
+    t.boolean  "useron"
+    t.boolean  "manageron"
     t.integer  "days"
-    t.integer  "Pgot"
+    t.integer  "got"
     t.string   "start"
     t.integer  "goaldays"
     t.integer  "user_id"

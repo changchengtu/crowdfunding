@@ -15,9 +15,9 @@ color:#696969;
 </style>
 
 <div id="editContent">
-	<div><p style="color:#8B3E2F;">團隊介紹：</p><%=simple_format @presub.Pintro%></div>
-	<div><p style="color:#8B3E2F;">專案摘要：</p><%=simple_format @presub.Psummary%></div>
-	<div><p style="color:#8B3E2F;">回餽方案：</p><%=simple_format @presub.Pfeedback%></div>
+	<div><p style="color:#8B3E2F;">團隊介紹：</p><%=simple_format @presub.intro%></div>
+	<div><p style="color:#8B3E2F;">專案摘要：</p><%=simple_format @presub.summary%></div>
+	<div><p style="color:#8B3E2F;">回餽方案：</p><%=simple_format @presub.feedback%></div>
 	<div><p style="color:#8B3E2F;">使用者名稱：</p><%=@presub.user.name%></div>
 	<div><p style="color:#8B3E2F;">使用者信箱：</p><%=@presub.user.email%></div>
 </div>

@@ -1,12 +1,12 @@
 class CreatePresubs < ActiveRecord::Migration
   def change
     create_table :presubs do |t|
-      t.string :Pname
-      t.string :Pclassify
-      t.integer :Pgoal
-      t.string :Pintro
-      t.string :Psummary
-      t.string :Pfeedback
+      t.string :name
+      t.string :classify
+      t.integer :goal
+      t.string :intro
+      t.string :summary
+      t.string :feedback
       t.boolean :confirm
 
       t.references :user

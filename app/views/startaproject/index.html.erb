@@ -10,7 +10,7 @@
 		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 
 			<% @userpresubunconfirm.each do |presub| %>
-			<%=simple_format presub.Pname%>
+			<%=simple_format presub.name%>
 			
 			<%end%>
 	</div>
@@ -24,7 +24,7 @@
 				<tbody>
 					<% @usercanonproject.each do |pro| %>				
 				<tr>
-					<td style="padding-right:60px;"><%=simple_format pro.Pname%></td>
+					<td style="padding-right:60px;"><%=simple_format pro.name%></td>
       		 
       				<td><%= link_to "專案上架","startaproject/authorizep/"+pro.id.to_s %></td>	
       			</tr>
@@ -42,7 +42,7 @@
 		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 	
 			<% @userproon.each do |pro| %>
-       			<a href=<%=project_path(pro.id)%>><%= simple_format pro.Pname%>
+       			<a href=<%=project_path(pro.id)%>><%= simple_format pro.name%></a>
 
 			<%end%>
 

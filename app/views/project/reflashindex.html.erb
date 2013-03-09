@@ -16,11 +16,11 @@
       <% @allproject.each do |p|%>
       <div id="id-item" class="item">
         <div id="id-item-name">
-          <%= simple_format p.Pname%>
+          <%= simple_format p.name%>
         </div>
-        <center><a href=<%=project_path(p.id)%>><img src=<%=p.Ppic%>></a></center>
+        <center><a href=<%=project_path(p.id)%>><img src=<%=p.pic%>></a></center>
 	<div style="float: left; font-size:15px;color:#607B8B; font-family: 微軟正黑體;">發起者：<%= p.user.name%></div>
-        <% case p.Pclassify%>
+        <% case p.classify%>
   	  <%when '1'%>
     	    <div id="classify">分類：設計商品</div>
   	  <%when '2'%>
@@ -40,14 +40,14 @@
 	<% end %>
 	</br>
 	<%@progress=0%>
-        <%if (p.Pgot.to_f/(p.Pgoal.to_f+1))*100.to_i>100%>
+        <%if (p.got.to_f/(p.goal.to_f+1))*100.to_i>100%>
 	  <%@progress = 100%>
         <%else%>
-          <%@progress = (p.Pgot.to_f/(p.Pgoal.to_f+1))*100.to_i%>
+          <%@progress = (p.got.to_f/(p.goal.to_f+1))*100.to_i%>
         <%end%>
         <div style="width:<%= @progress%>%;height:10px;background-color:red;"></div>
         <div id="id-item-describe" style="clear:both; font-family: 微軟正黑體;">
-          <%= simple_format p.Pdescribe%>
+          <%= simple_format p.describe%>
         </div>
 	<div style="font-size:17px; color:#53868B; font-family: 微軟正黑體;">剩餘天數：<%= p.days%></div>
       </div>

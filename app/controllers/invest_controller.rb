@@ -8,8 +8,8 @@ class InvestController < ApplicationController
   def update
     Investment.create(params[:invest])
     @thisp = Pro.find(params[:id])
-    sum = @thisp.Pgot.to_i + params[:invest][:howMuch].to_i
-    @thisp.update_attributes(:Pgot=>sum)
+    sum = @thisp.got.to_i + params[:invest][:howmuch].to_i
+    @thisp.update_attributes(:got=>sum)
     redirect_to root_path
   end
 end

@@ -1,20 +1,20 @@
 <div id="Mshowname">
-  <%= @confirm.Pname%>
+  <%= @confirm.name%>
 </div>
 <div id="Mshowemail">
   <%= @confirm.user.email%>
 </div>
 <div id="Mshowcontext">
   <div id="Mshowmedia">
-    <%= @confirm.Pvideo.html_safe%>
+    <%= @confirm.video.html_safe%>
   </div>
 
   <div id="Mshowteam">
-    <%= @confirm.Pintro%>
+    <%= @confirm.intro%>
   </div>
 
   <div id="Mshowsummary">
-    <%= simple_format @confirm.Psummary%>
+    <%= simple_format @confirm.summary%>
   </div>
 </div>
 

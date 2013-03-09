@@ -1,11 +1,11 @@
 <div id="presubForm">
   <%= form_tag '/startaproject', :method=>:post do %>
 
-    <%= label :start, :Pname, '專案名稱：'%>
-    <%= text_field :start, :Pname, :value=>"啥東東"%></br>
+    <%= label :start, :name, '專案名稱：'%>
+    <%= text_field :start, :name, :value=>"啥東東"%></br>
 
-    <%= label :start, :Pclassify, '專案類別：'%>
-    <select id="start_Pclassify" name="start[Pclassify]">
+    <%= label :start, :classify, '專案類別：'%>
+    <select id="start_classify" name="start[classify]">
       <option value="1">設計商品</option>
       <option value="2">音樂影視</option>
       <option value="3">舞台演出</option>
@@ -16,17 +16,17 @@
       <option value="8">美食饗宴</option>
     </select>
     </br>
-    <%= label :start, :Pgoal, '集資目標：'%>
-    <%= text_field :start, :Pgoal, :value=>0%></br>
+    <%= label :start, :goal, '集資目標：'%>
+    <%= text_field :start, :goal, :value=>0%></br>
 
-    <%= label :start, :Pintro, '團隊介紹：'%>
-    <%= text_area :start, :Pintro %>
+    <%= label :start, :intro, '團隊介紹：'%>
+    <%= text_area :start, :intro %>
 
-    <%= label :start, :Psummary, '專案摘要：'%>
-    <%= text_area :start, :Psummary %>
+    <%= label :start, :summary, '專案摘要：'%>
+    <%= text_area :start, :summary %>
 
-    <%= label :start, :Pfeedback, '集資回饋：'%>
-    <%= text_area :start, :Pfeedback%>
+    <%= label :start, :feedback, '集資回饋：'%>
+    <%= text_area :start, :feedback%>
 
     <%= hidden_field :start, :user_id, :value=>current_user.id%>
 

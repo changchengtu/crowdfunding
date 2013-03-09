@@ -1,19 +1,19 @@
 class CreatePros < ActiveRecord::Migration
   def change
     create_table :pros do |t|
-      t.string :Pname
-      t.string :Pclassify
-      t.integer :Pgoal
-      t.text :Ppic
-      t.string :Pvideo
-      t.string :Pdescribe
-      t.text :Pintro
-      t.text :Psummary
-      t.text :Pfeedback
-      t.boolean :PuserOn
-      t.boolean :PmanagerOn
+      t.string :name
+      t.string :classify
+      t.integer :goal
+      t.text :pic
+      t.string :video
+      t.string :describe
+      t.text :intro
+      t.text :summary
+      t.text :feedback
+      t.boolean :useron
+      t.boolean :manageron
       t.integer :days
-      t.integer :Pgot
+      t.integer :got
       t.string :start
       t.integer :goaldays 
 

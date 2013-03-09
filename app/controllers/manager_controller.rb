@@ -14,8 +14,8 @@ class ManagerController < ApplicationController
 
   def index
     @allpresub = Presub.where(:confirm=>nil).all
-    @allreadytoon = Pro.where(:PmanagerOn=>false,:PuserOn=>true) #haven't done yet
-    @allpro = Pro.where(:PmanagerOn=>true)
+    @allreadytoon = Pro.where(:manageron=>false,:useron=>true) #haven't done yet
+    @allpro = Pro.where(:manageron=>true)
   end
 
   def new
@@ -30,7 +30,7 @@ class ManagerController < ApplicationController
     @confirm.update_attributes!(params[:confirm])
    
     if @confirm.confirm
-      Pro.create(:Pname=>@confirm.Pname, :Pclassify=>@confirm.Pclassify, :Pgoal=>@confirm.Pgoal, :user_id=>@confirm.user_id, :PuserOn=>false, :PmanagerOn=>false)
+      Pro.create(:name=>@confirm.name, :classify=>@confirm.classify, :goal=>@confirm.goal, :user_id=>@confirm.user_id, :useron=>false, :manageron=>false)
     end
     redirect_to manager_index_path
   end
@@ -41,7 +41,7 @@ class ManagerController < ApplicationController
 
   def updatepro
     @state = Pro.find(params[:id])
-    @state.update_attributes!(:PmanagerOn=>true, :start=>Time.now, :days=>@state.goaldays)
+    @state.update_attributes!(:manageron=>true, :start=>Time.now, :days=>@state.goaldays)
 
     
     

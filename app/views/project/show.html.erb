@@ -1,15 +1,15 @@
 <div id="showname">
-  <%= @thisp.Pname%>
+  <%= @thisp.name%>
 </div>
 <div id="showcontext">
 	<div style="float:left;">
 	<center>
  		 <div id="showmedia">
-  		  <%= @thisp.Pvideo.html_safe%>
+  		  <%= @thisp.video.html_safe%>
   		</div>	
   	</center>	
   		<div id="showsummary">
-   			 <%= simple_format @thisp.Psummary%>
+   			 <%= simple_format @thisp.summary%>
  		 </div>
  	
   	</div>
@@ -24,14 +24,14 @@
 	<div style="float:left;">
   		 <div id="showinfo" >
   	 		<p style="font-size: 18px;"> 剩餘天數：</p><%= @thisp.days%></br>
-   			 <p style="font-size: 18px;">目前募集：</p><%= @thisp.Pgot%></br>
+   			 <p style="font-size: 18px;">目前募集：</p><%= @thisp.got%></br>
  	 		 <center><a href="/invest/<%= @thisp.id%>/edit"><div style="width:100%; height:40px; background-color:#d44413; border-radius: 5px;font-size:35px;">出資</div></a></center>
 	 	 </div>
  		 <div id="showteam" >
-  			  <%= @thisp.Pintro%>
+  			  <%= @thisp.intro%>
   	         </div>
                 <%@allinvest.each do|invest|%>
-		  <div>暱稱<%=invest.user_id%></br>金額<%=invest.howMuch%></div>
+		  <div>暱稱<%=invest.user_id%></br>金額<%=invest.howmuch%></div>
 		<%end%>
 		
 	</div>

@@ -1,5 +1,5 @@
 class Pro < ActiveRecord::Base
-  attr_accessible :id,:Pname, :Pclassify, :Pgoal, :Ppic, :Pdescribe, :Pintro, :Psummary, :Pfeedback, :user_id, :PuserOn, :PmanagerOn, :days, :Pvideo, :Pgot, :start, :goaldays
+  attr_accessible :id,:name, :classify, :goal, :pic, :describe, :intro, :summary, :feedback, :user_id, :useron, :manageron, :days, :video, :got, :start, :goaldays
 
   belongs_to :user
   belongs_to :presub

@@ -18,6 +18,9 @@
     </br>
     <%= label :content, :Pfeedback, '投資回餽'%></br>
     <%= text_area :content, :Pfeedback, :value=>@pro.Pfeedback%>
+    </br>
+    <%= label :content, :goaldays, '天數'%></br>
+    <%= select :content, :goaldays, [15,30,45], :selected=>@pro.goaldays%>
     <center>
     </br>
     <%= label :content, :PuserOn, '上架'%>

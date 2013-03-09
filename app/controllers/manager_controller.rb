@@ -41,7 +41,7 @@ class ManagerController < ApplicationController
 
   def updatepro
     @state = Pro.find(params[:id])
-    @state.update_attributes!(:PmanagerOn=>true, :start=>Time.now, :goaldays=>40, :days=>40)
+    @state.update_attributes!(:PmanagerOn=>true, :start=>Time.now, :days=>@state.goaldays)
 
     
     

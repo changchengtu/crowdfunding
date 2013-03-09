@@ -24,6 +24,7 @@ color:#696969;
 
   <%= form_tag manager_path(@presub.id),:method=>:put  do %>
 	<div align="center" style="margin-top: 20px; font-family: 微軟正黑體;">
+        <%= hidden_field :confirm, :name, :value=>@presub.name%>        
         <%= label :confirm, :confirm, '合格？'%>
         <%= select :confirm, :confirm,[nil,true,false]%>
 

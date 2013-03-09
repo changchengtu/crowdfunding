@@ -11,7 +11,7 @@
         <%= text_field :invest, :pro_id, :value=>@thisp.id%>
 
         <%= label :invest, :user_id, "誰投的"%>
-        <%= text_field :invest, :user_id, :value=>current_user.id%>
+        <%= text_field :invest, :user_id, :value=>current_user%>
 
         <%= submit_tag '確定'%>
         </div>

@@ -2,6 +2,7 @@ class InvestController < ApplicationController
 
   def edit
     @thisp = Pro.find(params[:id])
+    @pro_id = params[:id].to_i
   end
   def update
     Investment.create(params[:invest])

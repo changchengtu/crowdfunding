@@ -7,6 +7,7 @@ class CreateMessages < ActiveRecord::Migration
       t.string :user_name
 
       t.references :pro
+      t.references :user
 
       t.timestamps
     end

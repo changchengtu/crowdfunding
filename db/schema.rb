@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20130310135806) do
     t.boolean  "ques"
     t.string   "user_name"
     t.integer  "pro_id"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

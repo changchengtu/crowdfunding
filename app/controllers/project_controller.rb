@@ -1,4 +1,8 @@
 class ProjectController < ApplicationController
+  include ApplicationHelper
+  include ActionView::Helpers::TextHelper
+  include ActionView::Helpers::TagHelper
+
   def index
     @allproject = Pro.where(:manageron=>true)
   end
@@ -8,7 +12,7 @@ class ProjectController < ApplicationController
   end
 
   def show
-	    @thisp = Pro.find(params[:id])
+    @thisp = Pro.find(params[:id])
     @allinvest = Investment.where(:pro_id=>params[:id])
   end
 
@@ -44,5 +48,10 @@ class ProjectController < ApplicationController
     elsif page == '11'
       @allproject = Pro.where("pros.days=0 and pros.goal>pros.got")
     end
+  end
+
+  def postmessage
+    Message.create(params[:message])
+    redirect_to root_path
   end
 end

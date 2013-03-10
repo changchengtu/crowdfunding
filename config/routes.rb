@@ -6,6 +6,7 @@ Crowdfunding::Application.routes.draw do
 
   root :to => "project#reflashindex"
 
+  put "project/postmessage"=>"project#postmessage"
   get "project/reflashindex/:page"=>"project#reflashindex"
   get "project/aboutus"=>"project#aboutus"
   resources :project

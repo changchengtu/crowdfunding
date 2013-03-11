@@ -5,17 +5,37 @@
   <%= @confirm.user.email%>
 </div>
 <div id="Mshowcontext">
-  <div id="Mshowmedia">
-    <%= @confirm.video.html_safe%>
+	<div style="float:left;">
+		<center>
+  		<div id="Mshowmedia">
+    		<%= @confirm.video.html_safe%>
+ 		 </div>
+ 		 </center>
+ 		 <div id="Mshowsummary">
+   	 		<%= simple_format @confirm.summary%>
+ 	 	</div>
+ 	 </div>
+ 	 
+  <div style="font-family: 微軟正黑體; float: left; font-size:15px;color:#607B8B;">
+	發起者：<%= @confirm.user.name%>
   </div>
-
-  <div id="Mshowteam">
-    <%= @confirm.intro%>
+  <div style="font-family: 微軟正黑體; float: right; font-size:15px;color:#607B8B;">
+    e-mail：<%= @confirm.user.email%>
   </div>
-
-  <div id="Mshowsummary">
-    <%= simple_format @confirm.summary%>
-  </div>
+  
+	<div style="float:left; margin-left: 10px;">
+  		<div id="Mshowinfo" >
+  	 		<p style="font-size: 18px;color:#607B8B;"> 剩餘天數：</p><%= @confirm.days%></br>
+   			<p style="font-size: 18px;color:#607B8B;">目前募集：</p><%= @confirm.got%></br>
+ 		 	<center><a href="/invest/<%= @confirm.id%>/edit"><div style="width:100%; height:40px; background-color:#d44413; border-radius: 5px;font-size:35px;">出資</div></a></center>
+		</div>
+ 		 <div id="Mshowteam">
+ 		 	<p style="font-size: 20px; color:#607B8B;">團隊介紹:</p></br>
+  			 <%= @confirm.intro%>
+ 		 </div>	
+	</div>
+	
+  	
 </div>
 
 <center>

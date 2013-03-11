@@ -43,11 +43,14 @@
 	
 
 
-<div>
+<div style="width:300px;height:auto;">
+  <% @message.each do |m|%>
+
+	   問題： <%=m.message%></br>
+  <%end%>
   <%= form_tag '/project/postmessage', :method=>:put do %>
     
     
-    <%= text_field :message, :user_name%> 
     <%= label :message, :message, '問題'%>
     <%= text_field :message, :message, :value=>"？"%>
 

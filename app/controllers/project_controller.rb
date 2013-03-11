@@ -14,6 +14,7 @@ class ProjectController < ApplicationController
   def show
     @thisp = Pro.find(params[:id])
     @allinvest = Investment.where(:pro_id=>params[:id])
+    @message = Message.where(:pro_id=>params[:id])
   end
 
   def create
@@ -52,6 +53,6 @@ class ProjectController < ApplicationController
 
   def postmessage
     Message.create(params[:message])
-    redirect_to root_path
+    redirect_to project_path(params[:message][:pro_id])
   end
 end

@@ -1,9 +1,5 @@
 class ProjectController < ApplicationController
-  include ApplicationHelper
-  include ActionView::Helpers::TextHelper
-  include ActionView::Helpers::TagHelper
-
-  def index
+  def reflashindex
     @allproject = Pro.where(:manageron=>true)
   end
 
@@ -14,7 +10,7 @@ class ProjectController < ApplicationController
   def show
     @thisp = Pro.find(params[:id])
     @allinvest = Investment.where(:pro_id=>params[:id])
-    @message = Message.where(:pro_id=>params[:id])
+    @message = 	Question.where(:pro_id=>params[:id])
   end
 
   def create
@@ -52,7 +48,7 @@ class ProjectController < ApplicationController
   end
 
   def postmessage
-    Message.create(params[:message])
+    Question.create(params[:message])
     redirect_to project_path(params[:message][:pro_id])
   end
 end

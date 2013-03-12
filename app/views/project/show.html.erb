@@ -46,18 +46,28 @@
 <center>
 <div id="showMessage">
           <% @message.each do |m|%>
+           <%if m.show == true%>
 
-           問題： <%=m.message%></br>
+             問題： <%=m.context%></br>
+
+             <%=Question.find(m.id).answers.each do |answer|%>
+		回答：<%=answer.context%>
+             <%end%>
+ 	   <%end%>
           <%end%>
 	</br>
+
+
   <%= form_tag '/project/postmessage', :method=>:put do %>
     
-    
-    <%= label :message, :message, '問題'%>
-    <%= text_field :message, :message, :value=>"？"%>
+    <%= label :message ,:name ,'姓名'%>
+    <%= text_field :message, :name, :value=>'匿名' %>
+   
+    <%= label :message, :context, '問題'%>
+    <%= text_field :message, :context, :value=>"？"%>
 
     <%= hidden_field :message, :pro_id, :value=>@thisp.id%>    
-    <%= hidden_field :message, :ques, :value=>true%>
+    <%= hidden_field :message, :show, :value=>true%>
 
     <%= submit_tag '確定送出'%>
   <% end %>

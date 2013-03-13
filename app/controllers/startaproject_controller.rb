@@ -9,12 +9,15 @@ class StartaprojectController < ApplicationController
   end
 
   def new
+    @start = Presub.new(params[:start])
     
   end
 
   def create                         #創造一個前置專案
     @start = Presub.new(params[:start])
     if @start.save
+      useremail = User.find(params[:start][:user_id]).email
+      Usernotice.sendemail(useremail,'project information','your project:'+params[:start][:name]+' will be confirm').deliver
       redirect_to startaproject_index_path
     else
       render :template=>'startaproject/new.html.erb' 

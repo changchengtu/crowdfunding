@@ -43,6 +43,11 @@ gem "devise", "~> 2.2.3"
 # To use debugger
 # gem 'debugger'
 
+#login
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
+
+#error message
+gem "dynamic_form"
+

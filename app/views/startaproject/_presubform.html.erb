@@ -1,6 +1,8 @@
 <div id="presubForm">
+  請將空格填滿，自述請勿超過255個字
   <%= form_tag '/startaproject', :method=>:post do %>
-
+    <%= error_messages_for @start %>
+    </br>     
     <%= label :start, :name, '專案名稱：'%>
     <%= text_field :start, :name, :value=>"啥東東"%></br>
 
@@ -27,6 +29,7 @@
 
     <%= label :start, :feedback, '集資回饋：'%>
     <%= text_area :start, :feedback%>
+    <%=error_messages_for :feedback%>
 
     <%= hidden_field :start, :user_id, :value=>current_user.id%>
 

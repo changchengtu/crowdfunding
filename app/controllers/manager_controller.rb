@@ -31,6 +31,7 @@ class ManagerController < ApplicationController
    
     if @confirm.confirm
       Pro.create(:name=>params[:confirm][:name], :classify=>@confirm.classify, :goal=>@confirm.goal, :user_id=>@confirm.user_id, :useron=>false, :manageron=>false)
+      Usernotice.sendemail(User.find(@confirm.user_id).email,'project information','your project:'+@confirm.name+' has been confirmed').deliver
     end
     redirect_to manager_index_path
   end

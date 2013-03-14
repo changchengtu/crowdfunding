@@ -48,4 +48,9 @@ class ManagerController < ApplicationController
     
     redirect_to manager_index_path
   end
+
+  def deletepro
+    Pro.delete(params[:id])
+    redirect_to root_path
+  end
 end

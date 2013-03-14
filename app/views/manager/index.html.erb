@@ -60,8 +60,7 @@
                 <% @allpro.each do |pro| -%>
                         <tr>
                                 <td><%=pro.name%></td>
-                                <td><%=pro.classify%></td>
-                                <td><%=pro.goal%></td>
+                                <td><%=link_to "delete",'/manager/deletepro/'+pro.id.to_s,:method=>:put%></td>
                         </tr>
                 <% end-%>
         </tbody>

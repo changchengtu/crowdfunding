@@ -15,6 +15,7 @@ Crowdfunding::Application.routes.draw do
   put "startaproject/authorizep/updatep/:id"=>"startaproject#updatep"
   resources :startaproject
 
+  put "manager/deletepro/:id"=>"manager#deletepro"
   get "manager/editpro/:id"=>"manager#editpro"
   put "manager/updatepro/:id"=>"manager#updatepro"
   resources :manager

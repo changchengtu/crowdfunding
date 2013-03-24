@@ -6,15 +6,19 @@ Crowdfunding::Application.routes.draw do
 
   root :to => "project#reflashindex"
 
+  get "project/askforhelpc"=>"project#askforhelpc"
   put "project/postmessage"=>"project#postmessage"
   get "project/reflashindex/:page"=>"project#reflashindex"
   get "project/aboutus"=>"project#aboutus"
   resources :project
 
+
+  post "startaproject/updateanswer"=>"startaproject#updateanswer"
   get "startaproject/authorizep/:id"=>"startaproject#authorizep"
   put "startaproject/authorizep/updatep/:id"=>"startaproject#updatep"
   resources :startaproject
 
+  post "manager/saveaskforhelp"=>"manager#saveaskforhelp"
   put "manager/deletepro/:id"=>"manager#deletepro"
   get "manager/editpro/:id"=>"manager#editpro"
   put "manager/updatepro/:id"=>"manager#updatepro"

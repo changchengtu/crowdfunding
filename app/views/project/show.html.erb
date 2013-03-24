@@ -50,7 +50,7 @@
 
              問題： <%=m.context%></br>
 
-             <%=Question.find(m.id).answers.each do |answer|%>
+             <% Question.find(m.id).answers.each do |answer|%>
 		回答：<%=answer.context%>
              <%end%>
  	   <%end%>

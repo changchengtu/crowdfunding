@@ -67,3 +67,14 @@
 </div>
 </div>
 </div>
+
+
+<%=form_tag '/manager/saveaskforhelp' do%>
+  <%=label :ask, :title, "title"%>
+  <%=text_field :ask, :title%>
+
+  <%=label :ask, :url, "url"%>
+  <%=text_field :ask, :url%>
+
+  <%= submit_tag '確定送出'%>
+<%end%>

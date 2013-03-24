@@ -42,12 +42,19 @@
 		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 	
 			<% @userproon.each do |pro| %>
-       			<a href=<%=project_path(pro.id)%>><%= simple_format pro.name%></a>
+       			  <a href=<%=project_path(pro.id)%>><%= simple_format pro.name%></a>
+			  <% pro.questions.all.each do |q|%>
+			    <%= form_tag "/startaproject/updateanswer" do%>
+			      <%= q.context%>
+			      <%=hidden_field :answer, :question_id, :value=>q.id%>
+			      <%= text_area :answer, :context%>
+			      <%= submit_tag '確定送出'%>
+			    <%end%>
+			  <%end%>	
 
 			<%end%>
 
 	</div>
 </div>
 </center>
-
 

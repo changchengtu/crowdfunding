@@ -3,8 +3,9 @@ class StartaprojectController < ApplicationController
  
   def index
     @userpresubunconfirm = Presub.where(:confirm=>nil, :user_id=>current_user.id).all    #........
-    @usercanonproject = Pro.where(:useron=>false, :user_id=>current_user.id).all            #........
+    @usercanonproject = Pro.where(:manageron=>false, :user_id=>current_user.id).all            #........
     @userproon = Pro.where(:manageron=>true, :user_id=>current_user.id).all         #........
+    @question = Question.where(:user_id=>current_user.id).all
   end
 
   def new
@@ -37,5 +38,10 @@ class StartaprojectController < ApplicationController
   end
 
   def update
+  end
+
+  def updateanswer
+    Answer.create(params[:answer])
+    redirect_to startaproject_index_path
   end
 end

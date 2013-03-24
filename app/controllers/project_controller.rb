@@ -51,4 +51,8 @@ class ProjectController < ApplicationController
     Question.create(params[:message])
     redirect_to project_path(params[:message][:pro_id])
   end
+  
+  def askforhelpc
+    @ask = Askforhelp.all
+  end
 end

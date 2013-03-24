@@ -53,4 +53,10 @@ class ManagerController < ApplicationController
     Pro.delete(params[:id])
     redirect_to root_path
   end
+
+
+  def saveaskforhelp
+    Askforhelp.create(params[:ask])
+    redirect_to root_path
+  end
 end

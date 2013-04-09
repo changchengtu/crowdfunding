@@ -10,6 +10,7 @@ class InvestController < ApplicationController
     @thisp = Pro.find(params[:id])
     sum = @thisp.got.to_i + params[:invest][:howmuch].to_i
     @thisp.update_attributes(:got=>sum)
+    Usernotice.sendmail(@thisp.user.email,'您獲得資助金','您獲得來自'＋User.find(params[:invest][:user_id]).email+'資助'＋params[:invest][:howmuch])
     redirect_to root_path
   end
 end

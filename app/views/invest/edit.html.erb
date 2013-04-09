@@ -2,8 +2,6 @@
 	<div id="content">
 		<p style="color:#8B3E2F;">專案名稱：</p>
 		<%= @thisp.name%>
-		<p style="color:#8B3E2F;">專案內容：</p>
-		<%= @thisp.summary%>
 		<p style="color:#8B3E2F;">目前募集：</p>
 		<%= @thisp.got%></br></br>
 	</div>
@@ -13,11 +11,8 @@
         <%= label :invest, :howmuch, '要投資多少金額？'%>
         <%= text_field :invest, :howmuch%></br>
 
-        <%= label :invest, :pro_id, "投到哪個專案："%>
-        <%= text_field :invest, :pro_id, :value=>@pro_id%></br>
-
-        <%= label :invest, :user_id, "投資者："%>
-        <%= text_field :invest, :user_id, :value=>@user_id%></br>
+        <%= hidden_field :invest, :pro_id, :value=>@pro_id%></br>
+        <%= hidden_field :invest, :user_id, :value=>@user_id%></br>
 
         <%= submit_tag '確定'%>
         </div>

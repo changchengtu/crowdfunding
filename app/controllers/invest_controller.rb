@@ -12,7 +12,7 @@ class InvestController < ApplicationController
     @thisp.update_attributes(:got=>sum)
 
 
-    Usernotice.sendemail(@thisp.user.email,'Someone want to invest your idea!', 'message').deliver
+    Usernotice.sendemail(@thisp.user.email,'Someone want to invest your idea!', User.find(@user_id).email+'->'+@thisp.name).deliver
     redirect_to root_path
   end
 end

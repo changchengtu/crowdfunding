@@ -11,6 +11,8 @@ class InvestController < ApplicationController
     sum = @thisp.got.to_i + params[:invest][:howmuch].to_i
     @thisp.update_attributes(:got=>sum)
 
+
+    Usernotice.sendemail(@thisp.user.email,'Someone want to invest your idea!', 'message').deliver
     redirect_to root_path
   end
 end

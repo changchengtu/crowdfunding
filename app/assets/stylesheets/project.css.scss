@@ -17,6 +17,13 @@ height:30px;
 float:left;
 font-family: 微軟正黑體;
 }
+#item1 {
+margin-right:7px;
+width:100px;
+height:30px;
+float:left;
+font-family: 微軟正黑體;
+}
 #container {
   clear:both;
 top:15px;
@@ -124,6 +131,7 @@ border-color: #F8E6D4;
 border-width: 15px;
 border-radius: 10px; 
 font-family: 微軟正黑體;
+overflow:hidden;
 }
 
 #showsummary {
@@ -139,5 +147,7 @@ font-family:微軟正黑體;
   font-family:微軟正黑體;
   width: 900px;
   margin:0 auto;
+  color:#696969;
+
 }
 

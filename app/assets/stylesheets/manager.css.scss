@@ -2,7 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#index_poSomething{ 
+  clear:both;
+  padding-top:10px;
+  width:40%;
+  margin: 0px auto;
+  height:auto;
+  text-align:center;
+
+}
+
 #index{
+padding-top:20px;
   margin: 0px auto;
   width:90%;
   height:auto;

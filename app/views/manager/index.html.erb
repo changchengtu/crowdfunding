@@ -1,6 +1,7 @@
+
 <div id="index">
 <div id="index_notyet" align="center">
-~ 未審核專案 ~
+【 未審核專案  】
 <div style="width: 100%;">
     <table style="text-align: center;">
         <thead>
@@ -24,7 +25,7 @@
 </div>
 
 <div id="index_request" align="center">
-~ 請求上架 ~
+【 請求上架 】
 <div>
     <table style="text-align: center;">
         <thead>
@@ -48,11 +49,12 @@
 </div>
 
 <div id="index_already" align="center">
-~ 已上架專案 ~
+【 已上架專案 】
 <div>
     <table style="text-align: center;">
         <thead>
                 <th>專案名稱</th>
+                <th>刪除</th>
                 
         </thead>
          <tbody>
@@ -68,13 +70,19 @@
 </div>
 </div>
 
-
-<%=form_tag '/manager/saveaskforhelp' do%>
-  <%=label :ask, :title, "title"%>
-  <%=text_field :ask, :title%>
-
-  <%=label :ask, :url, "url"%>
-  <%=text_field :ask, :url%>
-
+<center>
+<div id="index_poSomething">
+	【 事求人 】
+	</br></br>
+	<%=form_tag '/manager/saveaskforhelp' do%>
+  	<%=label :ask, :title, "Title："%>
+  	<%=text_field :ask, :title%>
+</br>
+  	<%=label :ask, :url, "URL："%>
+  	<%=text_field :ask, :url%>
+</br>
   <%= submit_tag '確定送出'%>
 <%end%>
+</div>
+</center>
+

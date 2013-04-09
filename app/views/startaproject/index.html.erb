@@ -6,7 +6,7 @@
 <div id="content-all" align="center">
 	
 	<div id="uncheck">
-		~ 未審核 ~
+		【 未審核 】
 		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 
 			<% @userpresubunconfirm.each do |presub| %>
@@ -17,7 +17,7 @@
 
 
 	<div id="checkOK">
-		~ 合格 ~
+		【 合格 】
 		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 		<div id="projectUp" style=" width: 100%;"> 
 			<table style="text-align: center;">
@@ -38,11 +38,12 @@
 
 
 	<div id="checkNotOK">
-		~ 已上架專案 ~
+		【 已上架專案 】
 		<hr style="width: 80%; border-color:#CCCCCC;border:0.5;">
 	
 			<% @userproon.each do |pro| %>
        			  <a href=<%=project_path(pro.id)%>><%= simple_format pro.name%></a>
+       			  
 			  <% pro.questions.all.each do |q|%>
 			    <%= form_tag "/startaproject/updateanswer" do%>
 			      <%= q.context%>

@@ -2,6 +2,7 @@
   <%= @thisp.name%>
 </div>
 <div id="showcontext">
+	<div style="overflow:hidden; ">
 	<div style="float:left;">
 	<center>
  		 <div id="showmedia">
@@ -34,32 +35,35 @@
   	     </div>
                 <%@allinvest.each do|invest|%>
 		  <div id="showInvest">
-		  	<p style="font-size: 18px;color:#607B8B;">暱稱：</p><%=invest.user_id%>
-		  	<p style="font-size: 18px;color:#607B8B;">投資金額：</p><%=invest.howmuch%>
+		  	<div style="font-size: 18px;color:#607B8B; float:left;">暱稱：</div><div style="float:left;"><%=invest.user_id%></div>
+		  	<div style="font-size: 18px;color:#607B8B; float:left;">；投資金額：</div><div style="float:left;"><%=invest.howmuch%></div>
 		  </div>
 
 		<%end%>
 		
 	</div>
+	</div>
 	
+<img src="https://dl.dropbox.com/u/19978892/%E5%88%86%E9%9A%94%E7%B7%9A%20%281%29.png" >
 
-<center>
 <div id="showMessage">
+	<p style="font-size: 30px; color:#607B8B; font-family: 微軟正黑體;">留言區</p>
           <% @message.each do |m|%>
            <%if m.show == true%>
-
-             問題： <%=m.context%></br>
+           	</br><div style="color:#8B3E2F;">【問題】</div> <%=m.context%></br>
 
              <% Question.find(m.id).answers.each do |answer|%>
-		回答：<%=answer.context%>
+			<div style="color:#8B3E2F;">回答：</div><%=answer.context%></br>
              <%end%>
  	   <%end%>
           <%end%>
 	</br>
 
-
+</br>
+</br>
+<center>
   <%= form_tag '/project/postmessage', :method=>:put do %>
-    
+    <div style="color:black;">
     <%= label :message ,:name ,'姓名'%>
     <%= text_field :message, :name, :value=>'匿名' %>
    
@@ -71,8 +75,10 @@
 
     <%= submit_tag '確定送出'%>
   <% end %>
+  </div>
+  </center>
 </div>
-</center>
+
 </div>
 
 

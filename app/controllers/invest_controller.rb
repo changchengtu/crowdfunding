@@ -11,7 +11,7 @@ class InvestController < ApplicationController
     sum = @thisp.got.to_i + params[:invest][:howmuch].to_i
     @thisp.update_attributes(:got=>sum)
 
-    message = User.find(@user_id).email+'want to support'+params[:invest][:howmuch]+'NTD to your project:'+@thisp.name
+    message = User.find(@user_id).email+'->'+@thisp.name
     Usernotice.sendemail(@thisp.user.email,'Someone want to invest your idea!', message).deliver
     redirect_to root_path
   end
